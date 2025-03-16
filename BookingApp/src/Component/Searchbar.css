@@ -1,0 +1,100 @@
+* {
+    font-family: 'Segoe UI', sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.searchbar {
+    position: absolute;
+    bottom: -70px;
+    z-index: 3;  
+}
+
+.upper-searchbar {
+    background-color: #FFB700;
+    padding: 2px 0;
+    border-radius: 10px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: sticky;
+
+}
+
+.sec1, .sec2, .sec3{
+    border-radius: 5px;
+    border-color: white;
+    background-color: white;
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+
+}
+.sec1 {
+    padding: 12px 100px;
+      margin-right: 2px;
+    margin-left: 6px;
+      cursor:text;
+
+}
+
+.sec1, .sec2, .sec3:hover {
+    border-color: orange;
+}
+
+.sec2 {
+    padding: 12px 60px;
+     margin: 2px;
+     cursor: pointer;
+
+}
+
+
+.sec3 {
+    padding: 12px 95px;
+    border-radius: 5px;
+      margin-right: 2px;
+    cursor: pointer;
+
+}
+
+.sec-img{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.sec-1 {
+    padding: 12px 35px;
+    background-color: #006CE4;
+    font-size: bold;
+    color: white;
+    border-radius: 5px;
+    border: #006CE4;
+    font-weight: 400;
+    font-size: 15px;
+    margin-right: 4px;
+}
+
+.sec-1:hover {
+    background-color: #003B95;
+}
+
+.lower-searchbar{
+    display: flex;
+    font-size: 16px;
+    color: #333;
+    padding-top: 20px;
+}
+.checkbox{
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.check-box-text{
+    cursor: pointer;
+    font-size: 15px;
+}
