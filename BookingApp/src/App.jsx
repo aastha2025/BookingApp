@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from "./Component/Navbar";
 import Home from "./Component/Home";
 import Offers from './Component/Offers';
+import Property from './Component/Property';
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
       <Navbar />
       <Home />
       <Offers/>
+      <Property />
     </div>
   );
 }
 
-export default App
+export default App;

@@ -1,0 +1,71 @@
+.property {
+    padding: 10px;
+    text-align: start;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: start;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.carousel1 {
+    max-width: 100%;
+}
+
+.property-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align:start;
+    padding: 15px;
+}
+
+.property-image {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.property-content {
+    margin-top: 10px;
+}
+
+ h5 {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .property-image {
+        max-width: 200px;
+        height: 150px;
+    }
+
+    .property-card {
+        padding: 10px;
+    }
+}
