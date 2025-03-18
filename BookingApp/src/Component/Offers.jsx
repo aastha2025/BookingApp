@@ -16,7 +16,7 @@ function Offers() {
         {
             id: 2,
             title: "Quick escape, quality time",
-            description: "SSave up to 20% with a Getaway Deal",
+            description: "Save up to 20% with a Getaway Deal",
             image: "/images/offer2.jpeg",
             button: "Save on stays"
         },
