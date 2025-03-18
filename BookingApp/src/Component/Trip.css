@@ -1,0 +1,99 @@
+.trip{
+    padding: 10px;
+    text-align: start;
+    margin-top: 10px;
+    background-color: white;
+
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: start;
+}
+
+.trip-h{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+
+}
+
+.trip-p{
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.trip-nav{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+
+}
+.trip-nav-b{
+    justify-content: space-between;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    display: flex;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+    border-radius: 25px;
+    border: none;
+    background-color: white;
+}
+.trip-nav-b:hover{
+    background-color: grey ;
+}
+
+.trip-img{
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+
+}
+.trip-carousel{
+    max-width: 100%;
+}
+.trip-card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align:start;
+    padding: 15px;
+}
+
+.trip-image{
+    width: 100%;
+    max-width: 170px;
+    height: 136px;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+.trip-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+h5 {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    justify-content: flex-start;
+    margin-top: 5px;
+    width: 170px;
+    height: 24px;
+}
+
+.trip-dis{
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    width: 170px;
+    height: 20px;
+}

@@ -34,7 +34,7 @@
 
 }
 .sec1 {
-    padding: 12px 100px;
+    padding: 12px 90px;
       margin-right: 2px;
     margin-left: 6px;
       cursor:text;
@@ -54,7 +54,7 @@
 
 
 .sec3 {
-    padding: 12px 95px;
+    padding: 12px 85px;
     border-radius: 5px;
       margin-right: 2px;
     cursor: pointer;
@@ -67,7 +67,7 @@
     margin-right: 10px;
 }
 .sec-1 {
-    padding: 12px 35px;
+    padding: 12px 25px;
     background-color: #006CE4;
     font-size: bold;
     color: white;
