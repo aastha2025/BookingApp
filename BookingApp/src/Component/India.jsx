@@ -83,8 +83,8 @@ function India() {
     return (
         <div className="india">
             <div className="container">
-                <h2 className="india-h">popular attractions in India</h2>
-                <p className="india-p">Experience everything this city has to offer</p>
+                <h2 className="india-h">Explore India</h2>
+                <p className="india-p">these popular destinations have a lot to offer</p>
                   <Slider {...settings} className="india-carousel">
                     {indias.map((india) => (
                         <div className="india-card" key = {india.id}>

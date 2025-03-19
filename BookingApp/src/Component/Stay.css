@@ -1,0 +1,108 @@
+.stay {
+    padding: 10px;
+    text-align: start;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: start;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.stay-p{
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.stay-carosuel{
+    max-width: 100%;
+}
+
+.stay-card{
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: start;
+    width: 300px;
+    
+}
+
+.stay-image img{
+    width: 263px;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.stay-p1 {
+    font-size: 14px;
+    color: #777;
+    margin: 8px;
+   }
+
+.stay-h {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 8px;
+}
+
+.stay-view {
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    margin: 10px ;
+}
+.stay-view-btn {
+    background-color: #003B95;
+    color: white;
+    border: none;
+    padding: 5px 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.stay-view-p {
+    font-size: 14px;
+    color: #444;
+    font-weight: bold;
+}
+
+.stay-view-review {
+    font-size: 12px;
+    color: #777;
+}
+
+.stay-price {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.stay-price-p {
+    font-size: 14px;
+    color: #555;
+    
+}
+
+.stay-rupee {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}

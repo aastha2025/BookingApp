@@ -6,7 +6,7 @@ import Property from './Component/Property';
 import Destination from './Component/Destination';
 import Trip from './Component/Trip';
 import India from './Component/India';
-
+import Stay from './Component/Stay';
 function App() {
   return (
     <div>
@@ -17,6 +17,7 @@ function App() {
       <Destination />
       <Trip />
       <India />
+      <Stay />
     </div>
   );
 }
