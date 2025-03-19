@@ -22,7 +22,7 @@
 }
 
 .coupon-card {
-    display: flex;
+    display: flex !important;
     align-items: start;
     background: white;
     border-radius: 10px;
