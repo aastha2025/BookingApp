@@ -57,6 +57,13 @@ h2 {
     font-weight: bold;
     color: #333;
     margin: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+    word-wrap: break-word;
+
 }
 
 .stay-view {
