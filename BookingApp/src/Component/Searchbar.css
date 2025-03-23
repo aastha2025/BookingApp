@@ -6,7 +6,7 @@
 
 .container {
     max-width: 1100px;
-    background-color: black;
+    /* background-color: black; */
     margin: auto;
     text-align: start;
 }

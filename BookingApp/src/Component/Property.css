@@ -11,6 +11,45 @@
     text-align: start;
 }
 
+
+
+.carousel1 .slick-prev,
+.carousel1 .slick-next {
+    z-index: 2;
+}
+
+
+.carousel1 .slick-prev::before,
+.carousel1 .slick-next::before {
+    font-size: 45px;
+    color: #b3b0b0; 
+    border-width: 0 3px 3px 0;
+    /* border: 1px solid #ccc; */
+    /* padding: 5px; */
+}
+.carousel1 .slick-prev:hover::before,
+.carousel1 .slick-next:hover::before {
+    color: #beb7b7; 
+    border-color: #5e5a5a;
+}
+
+/* Adjust position of the right arrow */
+.carousel1 .slick-next {
+    top: 100px;
+    /* left: 1110px; */
+    right: 0px; 
+    transform: translateX(-50%);
+    z-index: 2; 
+}
+
+.carousel1 .slick-prev {
+    top: 110px;
+    left: 0px;
+    z-index: 2;
+}
+
+
+
 h2 {
     font-size: 24px;
     color: #333;
