@@ -4,62 +4,108 @@
     padding: 0;
 }
 
+.container {
+    max-width: 1100px;
+    background-color: black;
+    margin: auto;
+    text-align: start;
+}
 .searchbar {
     position: absolute;
+    width: 1130px;
     bottom: -70px;
-    z-index: 3;  
 }
 
 .upper-searchbar {
     background-color: #FFB700;
-    padding: 2px 0;
+    padding: 5px 5px;
     border-radius: 10px;
     margin-right: 2px;
     margin-bottom: 2px;
     display: flex;
+    gap: 10px;
     align-items: center;
-    justify-content: flex-start;
-    position: sticky;
-
+    justify-content: space-between;
 }
 
-.sec1, .sec2, .sec3{
+.sec1, .sec2{
+    width: 100%;
+    padding: 7px 7px;
     border-radius: 5px;
     border-color: white;
     background-color: white;
     font-weight: 400;
-    font-size: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.sec3 {
+    display: flex;
+    /* padding: 5px 5px; */
+    padding-left: 7px;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+
+.sec2 {
     display: flex;
     align-items: center;
-
+    /* justify-content: space-between; */
 }
-.sec1 {
+.sec2 img, .sec1 img, .sec3 img {
+    width: 30px;
+    height: 30px;
+}
+
+.sec2 .daty {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+    
+input[type="date"] {
+    cursor: pointer;
+}
+input[type="text"] {
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(26, 26, 26);
+    padding: 5px 5px;
+    border: none;
+    /* padding: 5px 5px; */
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+}
+
+/* .sec1 {
     padding: 12px 90px;
       margin-right: 2px;
     margin-left: 6px;
       cursor:text;
 
-}
+} */
 
 .sec1, .sec2, .sec3:hover {
     border-color: orange;
 }
 
-.sec2 {
-    padding: 12px 60px;
-     margin: 2px;
-     cursor: pointer;
-
+.stay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
 
-
-.sec3 {
-    padding: 12px 85px;
-    border-radius: 5px;
-      margin-right: 2px;
-    cursor: pointer;
-
-}
 
 .sec-img{
     width: 24px;
@@ -84,10 +130,116 @@
 
 .lower-searchbar{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.lowerLeft {
+    display: flex;
     font-size: 16px;
     color: #333;
     padding-top: 20px;
 }
+.sec3 {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.cardy {
+    position: absolute;
+    padding: 20px;
+    top: 70%;
+    right: 0;
+    width: 400px;
+    background-color: #ffffff;
+    color: #333;
+    z-index: 9999;
+    box-shadow: 4px 4px 10px #ccc;
+    border-radius: 10px;
+    padding: 20px; /* Add padding inside the card */
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.adult1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.adult1 p {
+    color: rgb(26, 26, 26);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.myBtn p{
+    font-size: 14px;
+}
+
+.myBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(26, 26, 26);
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.myBtn:hover {
+    border-color: #ffb700;
+    transform: scale(1.05);
+}
+
+.myBtn p {
+    margin: 0;
+    text-align: center;
+    width: 30px;
+}
+
+.parag {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.parag .pet {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.parag .pet p {
+    color: black;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.parag .cont p {
+    font-size: 12px;
+    color: black;
+    margin-bottom: 0px;
+}
+.myLine {
+    margin: 5px;
+}
+.parag .cont a{
+    font-size: 12px;
+    color: rgb(0, 108, 228);
+    font-weight: 400;
+    text-decoration: none;
+}
+
 .checkbox{
     width: 18px;
     height: 18px;
@@ -97,4 +249,21 @@
 .check-box-text{
     cursor: pointer;
     font-size: 15px;
+}
+
+.DoneBtn {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(0, 108, 228);
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 108, 228);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.DoneBtn:hover {
+    cursor: pointer;
+    background-color: #eef3fc;
 }
