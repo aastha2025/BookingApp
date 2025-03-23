@@ -1,0 +1,64 @@
+.inspire-trip{
+    padding: 10px;
+    text-align: start;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: start;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.inspire-trip-carousel{
+    max-width: 100%;
+}
+
+.inspire-trip-card{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align:start;
+    padding: 15px;
+}
+
+.inspire-trip-image  {
+    width: 100%;
+    max-width: 263px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 8px;
+
+}
+.inspire-trip-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.h5{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    justify-content: flex-start;
+    margin-top: 8px;
+    width: 263px;
+    height: 24px;
+}
+.inspire-trip-desc{
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 263px;
+    height: 40px;
+}

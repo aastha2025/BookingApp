@@ -9,6 +9,7 @@ import India from './Component/India';
 import Stay from './Component/Stay';
 import Homelove from './Component/Homelove';
 import Unique_prop from './Component/Unique_prop';
+import Inspire_trip from './Component/Inspire_trip';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Stay />
       <Homelove />
       <Unique_prop />
+      <Inspire_trip />
     </div>
   );
 }
