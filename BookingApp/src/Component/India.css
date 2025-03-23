@@ -77,3 +77,38 @@ h5 {
     width: 170px;
     height: 20px;
 }
+.india-carousel .slick-prev,
+.india-carousel .slick-next {
+    z-index: 2;
+}
+
+.india-carousel .slick-prev::before,
+.india-carousel .slick-next::before {
+    font-size: 45px;
+    color: #b3b0b0; 
+    border-width: 0 3px 3px 0;
+    /* border: 1px solid #ccc; */
+    /* padding: 5px; */
+}
+.india-carousel .slick-prev:hover::before,
+.india-carousel .slick-next:hover::before {
+    color:  #5e5a5a;
+    border-color:#beb7b7; 
+}
+
+/* Adjust position of the right arrow */
+.india-carousel .slick-next {
+    top: 70px;
+    /* left: 1110px; */
+    right: 0px; 
+    transform: translateX(-40%);
+    z-index: 2; 
+}
+
+.india-carousel .slick-prev {
+    top: 70px;
+    left: 0px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+

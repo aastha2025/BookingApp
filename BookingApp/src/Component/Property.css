@@ -29,8 +29,8 @@
 }
 .carousel1 .slick-prev:hover::before,
 .carousel1 .slick-next:hover::before {
-    color: #beb7b7; 
-    border-color: #5e5a5a;
+    color:  #5e5a5a;
+    border-color:#beb7b7; 
 }
 
 /* Adjust position of the right arrow */
@@ -43,8 +43,9 @@
 }
 
 .carousel1 .slick-prev {
-    top: 110px;
+    top: 100px;
     left: 0px;
+    transform: translateX(-50%);
     z-index: 2;
 }
 

@@ -113,3 +113,39 @@ h2 {
     font-weight: bold;
     color: black;
 }
+
+.stay-carousel .slick-prev,
+.stay-carousel .slick-next {
+    z-index: 2;
+}
+
+.stay-carousel .slick-prev::before,
+.stay-carousel .slick-next::before {
+    font-size: 45px;
+    color: #b3b0b0; 
+    border-width: 0 3px 3px 0;
+    /* border: 1px solid #ccc; */
+    /* padding: 5px; */
+}
+.stay-carousel .slick-prev:hover::before,
+.stay-carousel .slick-next:hover::before {
+    color:  #5e5a5a;
+    border-color:#beb7b7; 
+}
+
+/* Adjust position of the right arrow */
+.stay-carousel .slick-next {
+    top: 150px;
+    /* left: 1110px; */
+    right: 0px; 
+    transform: translateX(-30%);
+    z-index: 2; 
+}
+
+.stay-carousel .slick-prev {
+    top: 150px;
+    left: 0px;
+    transform: translateX(-100%);
+    z-index: 2;
+}
+

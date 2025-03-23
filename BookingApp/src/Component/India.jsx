@@ -66,7 +66,7 @@ function India() {
         },
         {
             id: 10,
-            image: "/images/in6.jpg",
+            image: "/images/ind6.jpg",
             name: "Gurgaon",
            properties: "1,132 properties"
         },
