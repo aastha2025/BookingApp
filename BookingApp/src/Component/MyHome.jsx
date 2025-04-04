@@ -9,6 +9,10 @@ import Stay from './Stay';
 import Homelove from './Homelove';
 import Unique_prop from './Unique_prop';
 import Inspire_trip from './Inspire_trip';
+import Footer from './Footer';
+import Footer1 from './Footer1';
+
+
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
       <Homelove />
       <Unique_prop />
       <Inspire_trip />
+      <Footer />
+      <Footer1 />
+
     </div>
   );
 }
