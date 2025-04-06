@@ -181,8 +181,28 @@ function Unique_prop() {
             slidesToShow: 4,
             slidesToScroll: 1,
             arrows: true,
-    
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    },
+                },
+                {
+                    breakpoint: 890,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+            ],
         };
+        
     
         return (
             <div className="unique-prop">

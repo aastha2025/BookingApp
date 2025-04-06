@@ -128,26 +128,26 @@ function Homelove() {
             arrows: true,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1200,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 3,
                     },
                 },
                 {
-                    breakpoint: 768,
+                    breakpoint: 890,
                     settings: {
                         slidesToShow: 2,
                     },
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 600,
                     settings: {
                         slidesToShow: 1,
                     },
                 },
             ],
-    
         };
+        
     
         return (
             <div className="homelove">

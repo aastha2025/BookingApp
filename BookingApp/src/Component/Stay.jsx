@@ -82,15 +82,35 @@ function Stay() {
             slidesToShow: 4,
             slidesToScroll: 1,
             arrows: true,
-    
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    },
+                },
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+            ],
         };
+        
     
         return (
             <div className="stay">
                 <div className="container">
                     <h2>Looking for the perfect stay?</h2>
                     <p className="stay-p">Travelers with similar searches booked these properties</p>
-                    <Slider {...settings} className="stay-carousel">
+                    <Slider {...settings} className="stay-carosuel ">
                         {stays.map((stay) => (
                             <div className="stay-card" key={stay.id}>
                                 <div className="stay-image">
