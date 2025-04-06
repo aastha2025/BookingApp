@@ -145,3 +145,41 @@ h2 {
     z-index: 2;
 }
 
+@media (max-width: 890px) {
+    .homelove-card {
+        width: 100% !important;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .homelove-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .homelove-h,
+    .homelove-p1,
+    .homelove-view,
+    .homelove-price {
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: start;
+    }
+
+    .homelove-price {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .homelove-carousel .slick-prev,
+    .homelove-carousel .slick-next {
+        top: 45%;
+    }
+
+    .homelove-view {
+        flex-wrap: wrap;
+    }
+}
