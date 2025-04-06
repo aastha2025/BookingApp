@@ -8,6 +8,7 @@
     max-width: 1100px;
     margin: auto;
     text-align: start;
+    padding: 0 15px;
 }
 
 .carousel3 {
@@ -24,6 +25,7 @@
     overflow: hidden;
     text-align: center;
     position: relative;
+    padding: 5px;
 }
 
 .des1-image {
@@ -51,4 +53,27 @@
     font-size: 24px;
     font-weight: bold;
     border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .des1-image {
+        height: 200px;
+        max-width: 100%;
+    }
+
+    .des1-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .des1-image {
+        height: 180px;
+    }
+
+    .des1-name {
+        font-size: 18px;
+        padding: 4px 8px;
+    }
 }

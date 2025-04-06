@@ -1,5 +1,5 @@
 .property {
-    padding: 10px;
+    padding: 20px;
     text-align: start;
     margin-top: 20px;
     background-color: white;
@@ -11,46 +11,6 @@
     text-align: start;
 }
 
-
-
-.carousel1 .slick-prev,
-.carousel1 .slick-next {
-    z-index: 2;
-}
-
-
-.carousel1 .slick-prev::before,
-.carousel1 .slick-next::before {
-    font-size: 45px;
-    color: #b3b0b0; 
-    border-width: 0 3px 3px 0;
-    /* border: 1px solid #ccc; */
-    /* padding: 5px; */
-}
-.carousel1 .slick-prev:hover::before,
-.carousel1 .slick-next:hover::before {
-    color:  #5e5a5a;
-    border-color:#beb7b7; 
-}
-
-/* Adjust position of the right arrow */
-.carousel1 .slick-next {
-    top: 100px;
-    /* left: 1110px; */
-    right: 0px; 
-    transform: translateX(-50%);
-    z-index: 2; 
-}
-
-.carousel1 .slick-prev {
-    top: 100px;
-    left: 0px;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-
-
 h2 {
     font-size: 24px;
     color: #333;
@@ -61,21 +21,52 @@ h2 {
     max-width: 100%;
 }
 
+/* Arrows */
+.carousel1 .slick-prev,
+.carousel1 .slick-next {
+    z-index: 2;
+}
+
+.carousel1 .slick-prev::before,
+.carousel1 .slick-next::before {
+    font-size: 30px;
+    color: #b3b0b0;
+}
+
+.carousel1 .slick-prev:hover::before,
+.carousel1 .slick-next:hover::before {
+    color: #5e5a5a;
+}
+
+.carousel1 .slick-next {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.carousel1 .slick-prev {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* Property card layout */
 .property-card {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    text-align:start;
+    text-align: center;
     padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .property-image {
     width: 100%;
     max-width: 250px;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -91,20 +82,42 @@ h2 {
     margin-top: 10px;
 }
 
- h5 {
-    font-size: 20px;
-    color: black;
-    font-weight: bold;
-    justify-content: flex-start;
+.property-content h5 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
 
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
-    .property-image {
-        max-width: 200px;
-        height: 150px;
-    }
-
     .property-card {
         padding: 10px;
+    }
+
+    .property-image {
+        height: 150px;
+        max-width: 90%;
+    }
+
+    .property-content h5 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .property {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .property-image {
+        height: 140px;
+    }
+
+    .property-content h5 {
+        font-size: 14px;
     }
 }

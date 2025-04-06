@@ -1,18 +1,6 @@
-* {
-    font-family: 'Segoe UI', sans-serif, Arial;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 1100px;
-    /* background-color: black; */
-    margin: auto;
-    text-align: start;
-}
 .searchbar {
     position: absolute;
-    width: 1130px;
+    width: 74vw;
     bottom: -70px;
 }
 
@@ -267,3 +255,113 @@ input[type="text"] {
     cursor: pointer;
     background-color: #eef3fc;
 }
+
+
+
+@media (max-width: 1286px) {
+        .searchbar {
+            width: 87vw;
+        }
+}
+@media(max-width: 1235px) {
+    .searchbar{
+        width: 90vw;
+    }
+}
+@media(max-width: 1200px) {
+    .searchbar{
+        width: 78vw;
+    }
+    .upper-searchbar {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 1050px) {
+    .searchbar{
+        width: 72vw;
+    }
+}
+@media(max-width: 800px) {
+    .searchbar{
+        width: 72vw;
+    }
+}
+@media(max-width: 890px) {
+    .searchbar{
+        width: 78vw;
+    }
+}
+@media(max-width: 810px) {
+    .searchbar{
+        width: 85vw;
+    }
+}
+@media(max-width: 780px) {
+    .searchbar{
+        width: 72vw;
+    }
+}
+
+@media(max-width: 637px) {
+    .searchbar{
+        width: 80vw;
+    }
+}
+@media(max-width: 580px) {
+    .searchbar{
+        width: 91vw;
+    }
+}
+
+
+
+
+@media (max-width: 936px) {
+    .upper-searchbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .searchbar {
+        bottom: -200px;
+    }
+    .sec1, .sec2, .sec3 {
+        width: 100%;
+    }
+
+    .sec-1 {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .stay {
+        /* justify-content: space-between; */
+        gap: 10px;
+    }
+
+    .lower-searchbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 936px) {
+    .cardy {
+      position: absolute;
+      width: 90vw;
+      left: 0;
+      top: 100%;
+      margin-top: 5px;
+      box-shadow: 4px 4px 10px #ccc;
+      z-index: 999;
+    }
+  
+    .sec3 {
+      position: relative; /* Ensure .cardy is positioned relative to this */
+    }
+  }

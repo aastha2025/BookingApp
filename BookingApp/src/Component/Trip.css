@@ -132,3 +132,50 @@ h5 {
     z-index: 2;
 }
 
+
+
+@media (max-width: 890px) {
+    .trip-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: flex-start;
+    }
+
+    .trip-nav-b {
+        flex: 1 1 40%;
+        font-size: 14px;
+        padding: 8px 12px;
+        justify-content: center;
+    }
+
+    .trip-carousel .slick-prev,
+    .trip-carousel .slick-next {
+        display: none; /* Hide arrows on smaller screens */
+    }
+
+    .trip-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .trip-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h5, .trip-dis {
+        width: 100%;
+        height: auto;
+    }
+
+    .trip-h {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .trip-p {
+        font-size: 14px;
+        text-align: center;
+    }
+}

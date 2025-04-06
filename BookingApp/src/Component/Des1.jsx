@@ -25,11 +25,18 @@ function Des1() {
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: false,
-        autoplaySpeed: 3000,
         infinite: true,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     };
-
+    
     return (
         <div className="upper-des">
             <div className="container">

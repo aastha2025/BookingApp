@@ -34,8 +34,23 @@ function Des2() {
         autoplay: false,
         autoplaySpeed: 3000,
         infinite: true,
-        arrows: false
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     };
+    
 
     return (
         <div className="lower-des">
