@@ -1,1 +1,1 @@
-# BookingApp
+# Travel Buddy
