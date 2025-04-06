@@ -1,26 +1,74 @@
-.destination{
-    padding: 10px;
+.destination {
+    padding: 20px;
     text-align: start;
     margin-top: 20px;
     background-color: white;
-
 }
+
 .container {
     max-width: 1100px;
     margin: auto;
     text-align: start;
+    padding: 0 15px;
 }
 
-h2{
-    font-size: 24px;
+h2 {
+    font-size: 28px;
     color: #333;
     margin-bottom: 10px;
-
 }
 
-.p1{
+.p1 {
     font-size: 16px;
     color: #555;
     margin-bottom: 20px;
+}
 
+
+/* .property-content h5 {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    max-width: 220px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */
+
+
+/* Placeholder styling for child components */
+.upper-des,
+.lower-des {
+    margin-bottom: 30px;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    .p1 {
+        font-size: 14px;
+    }
+
+    .upper-des,
+    .lower-des {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .destination {
+        padding: 15px 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .p1 {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
 }

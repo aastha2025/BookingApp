@@ -31,7 +31,7 @@ function Offers() {
         arrows: true, // Enables previous and next arrows
         autoplay: true, // Enables automatic scrolling
         autoplaySpeed: 2000, // Moves to the next slide every 2 seconds
-    
+
     };
 
     return (
@@ -52,9 +52,9 @@ function Offers() {
                             </div>
                         </div>
                     ))}
-                    </Slider>
-                </div>
+                </Slider>
             </div>
+        </div>
     );
 }
 

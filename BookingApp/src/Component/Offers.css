@@ -91,3 +91,55 @@
 }
 
 /* Slick Arrows */
+@media (max-width: 936px) {
+    .offer { /* whatever is just below the search bar */
+      margin-top: 200px; /* or adjust as needed */
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .coupon-card {
+      flex-direction: column !important;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .coupon-content {
+      padding: 15px;
+    }
+  
+    .coupon-content h3 {
+      font-size: 18px;
+    }
+  
+    .coupon-content p {
+      font-size: 14px;
+    }
+  
+    .coupon-button {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  
+    .coupon-image {
+      justify-content: center;
+      padding: 10px;
+    }
+  
+    .coupon-image img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+    }
+  
+    .offer {
+      margin-top: 250px; /* increase if your search bar overlaps */
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 0 10px;
+    }
+  }
+  
