@@ -39,11 +39,17 @@
     border: none;
     background-color: white;
     cursor: pointer;
-
 }
-.footer-nav-b:hover{
+/* .footer-nav-b:hover{
     background-color: grey ;
+} */
+
+.colorMe{
+    background-color: #F0F6FD;
+    border: 1px solid #006CE4;
+    color:#006CE4;
 }
+
 
 .footer-grid{
     display: grid;
