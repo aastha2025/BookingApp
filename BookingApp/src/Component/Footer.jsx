@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import "./Footer.css";
+import Domestic from "./FooterButtons/Domestic";
+import InternationalCity from "./FooterButtons/InternationalCity";
+import Region from "./FooterButtons/Region";
+import Countries from "./FooterButtons/Countries";
+import PlaceToStay from "./FooterButtons/PlaceToStay";
 
 
 function Footer() {
@@ -40,9 +45,17 @@ function Footer() {
                         Places to stay
                     </button>
                 </div>
+
+                {active == 'dom' && <Domestic /> }
+                {active == 'inter' && <InternationalCity />}
+                {active == 'reg' && <Region />}
+                {active == 'count' && <Countries />}
+                {active == 'stay' && <PlaceToStay />}
+
+                {/* <Domestic /> */}
               
               
-                <div className="footer-grid">
+                {/* <div className="footer-grid">
                     <div className="footer-section">
                         <ul>
                             <li>Shrinagar hotels</li>
@@ -92,7 +105,7 @@ function Footer() {
                             <li> Udaipur hotels</li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );
