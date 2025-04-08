@@ -7,7 +7,7 @@ import "./Trip.css";
 
 function Trip() {
 
-    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState("City");
     
     const categories =[
         { name: "City", icon: "/images/t3.png" },
