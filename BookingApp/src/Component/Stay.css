@@ -25,6 +25,10 @@ h2 {
 .stay-carosuel{
     max-width: 100%;
 }
+.stay-carousel .slick-slide > div {
+    padding: 0 10px; /* Adds spacing between slides */
+    box-sizing: border-box;
+}
 
 .stay-card{
     background: white;
@@ -38,6 +42,7 @@ h2 {
     width: 300px;
     
 }
+
 
 .stay-image img{
     width: 263px;

@@ -43,7 +43,17 @@
     background-color: white;
 }
 .trip-nav-b:hover{
-    background-color: grey ;
+    background-color: #CFC8C8 ;
+}
+.trip-nav-b.active {
+  background-color: #F0F6FD;
+  color: #2581E8;
+  border-radius: 25px;
+  border: 1px solid  #2581E8;
+
+}
+.trip-nav-b.active .trip-img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(93%) saturate(1416%) hue-rotate(195deg) brightness(91%) contrast(101%);
 }
 
 .trip-img{
