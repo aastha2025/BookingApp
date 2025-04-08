@@ -9,7 +9,7 @@ function Navbar() {
             <div className="container">
                 <div className="uppernavbar">
                     <div className="logo">
-                        <a href="/">BookingApp</a>
+                        <a href="/">StayScape</a>
                     </div>
                     <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                         ☰
