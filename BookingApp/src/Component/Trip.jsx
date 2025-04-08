@@ -12,7 +12,6 @@ function Trip() {
     const categories =[
         { name: "City", icon: "/images/t3.png" },
         { name: "Beach", icon: "/images/t1.png" },
-        { name: "Ski", icon: "/images/t4.png" },
         { name: "Outdoors", icon: "/images/t6.png" },
         { name: "Relax", icon: "/images/t5.png" },
         { name: "Romance", icon: "/images/t2.png" },
