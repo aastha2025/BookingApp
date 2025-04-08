@@ -11,6 +11,7 @@ import Unique_prop from './Unique_prop';
 import Inspire_trip from './Inspire_trip';
 import Footer from './Footer';
 import Footer1 from './Footer1';
+import Navbar from './Navbar';
 
 
 

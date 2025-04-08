@@ -33,7 +33,7 @@
 .trip-nav-b{
     justify-content: space-between;
     text-decoration: none;
-    color: #333;
+    /* color: #333; */
     font-size: 15px;
     display: flex;
     padding: 10px 15px;
@@ -41,9 +41,10 @@
     border-radius: 25px;
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 .trip-nav-b:hover{
-    background-color: #CFC8C8 ;
+    background-color: #f2f0f0 ;
 }
 .trip-nav-b.active {
   background-color: #F0F6FD;
