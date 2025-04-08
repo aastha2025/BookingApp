@@ -250,28 +250,34 @@ function Trip() {
     ];
 
     const filteredTrips = selectedCategory? trips.filter((trip) => trip.category === selectedCategory): trips;
+    const slidesToShow = Math.min(6, filteredTrips.length);
     const settings = {
         speed: 500,
-        slidesToShow: 6,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
+        infinite: filteredTrips.length > slidesToShow,
         arrows: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: Math.min(4, filteredTrips.length),
+                    infinite: filteredTrips.length > 4,
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: Math.min(2, filteredTrips.length),
+                    infinite: filteredTrips.length > 2,
                 },
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: Math.min(1, filteredTrips.length),
+                    infinite: filteredTrips.length > 1,
+
                 },
             },
         ],
