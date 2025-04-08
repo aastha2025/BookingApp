@@ -1,18 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 
 
 function Footer() {
+    const [active,setActive] = useState('dom');
     return (
         <div className="footer">
             <div className="container">
                 <h2 className="footer-h">Popular with travelers from India</h2>
                 <div className="footer-nav">
-                    <button className="footer-nav-b">Domestic cities</button>
-                    <button className="footer-nav-b">International cities</button>
-                    <button className="footer-nav-b">Regions</button>
-                    <button className="footer-nav-b">Countries</button>
-                    <button className="footer-nav-b">Places to stay</button>
+                    <button
+                        className={`footer-nav-b ${active === 'dom' ? 'colorMe' : ''}`}
+                        onClick={() => setActive('dom')}
+                    >
+                        Domestic cities
+                    </button>
+                    <button 
+                        className={`footer-nav-b ${active === 'inter' ? 'colorMe' : ''}`} 
+                        onClick={() => setActive('inter')}
+                    >
+                        International cities
+                    </button>
+                    <button 
+                        className={`footer-nav-b ${active === 'reg' ? 'colorMe' : ''}`} 
+                        onClick={() => setActive('reg')}
+                    >
+                        Regions
+                    </button>
+                    <button 
+                        className={`footer-nav-b ${active === 'count' ? 'colorMe' : ''}`} 
+                        onClick={() => setActive('count')}
+                    >
+                        Countries
+                    </button>
+                    <button 
+                        className={`footer-nav-b ${active === 'stay' ? 'colorMe' : ''}`} 
+                        onClick={() => setActive('stay')}
+                    >
+                        Places to stay
+                    </button>
                 </div>
               
               
