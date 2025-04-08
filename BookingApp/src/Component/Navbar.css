@@ -108,6 +108,8 @@
   background-color: #003B95;
   border: none;
   border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .lowernavbar .nav-a:hover {
