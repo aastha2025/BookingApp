@@ -32,7 +32,7 @@ function Auth(){
             onChange={(e) => setemail(e.target.value)}
             className={error? "error" :""}/>
 
-            {error && <span className="error-text">Enter your correct email address </span>}
+            {error && <span className="error-text">{error}</span>}
             <button  onClick= {handlefalsemail} className="btn-email">Continue with email</button>
             <p className="para">or use one of these options</p>
             <div className="btn">
