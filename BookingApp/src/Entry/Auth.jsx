@@ -7,8 +7,7 @@ function Auth(){
                 <h3>Sign in or create an account</h3>
                 <p>You can sign in using your Booking.com account to access our services.</p>
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email address"
-            value={email} />
+            <input type="email" id="email" placeholder="Enter your email address"/>
 
 
             <p className="or">pr use one of these options</p>

@@ -19,7 +19,7 @@ function Navbar() {
                         <button className="nav-item"><img src="/images/india.png" alt="india" className='icons' /></button>
                         <button className="nav-item"><img src="/images/icons8-unverified-account-50.png" alt="ques" className='icons' /></button>
                         <button className="nav-item">List your property</button>
-                        <a href='../Entry/Auth.jsx' className="login">Register</a>
+                        <a href='/auth' className="login">Register</a>
                         <button className="login">Sign In</button>
                     </div>
                 </div>

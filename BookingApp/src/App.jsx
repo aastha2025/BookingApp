@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<MyHome />} />
           <Route path='/flight' element={<Flight />} />
-          <Route path='../Entry/Auth.jsx' element={<Auth />} />
+          <Route path='/auth' element={<Auth />} />
         </Routes>
       </Router>
     </div>
