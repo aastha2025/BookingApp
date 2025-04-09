@@ -1,25 +1,48 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Auth.css";
 function Auth(){
+    const [email, setemail] = useState("");
+    const [error, setError] = useState("");
+
+    const isValidEmail = (email) =>{
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    };
+
+    const handlefalsemail = () => {
+        if(!email){
+            setError("Email address cannot be empty");
+        }
+        else if (!isValidEmail(email)){
+            setError("Please enter a valid email address.");
+        }
+        else{
+            setError("");
+            console.log("Email submitted successfully", email)
+
+        }
+    };
     return (
         <div>
             <div className="signin-container">
-                <h3>Sign in or create an account</h3>
+                <h4>Sign in or create an account</h4>
                 <p>You can sign in using your Booking.com account to access our services.</p>
             <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email address"/>
+            <input type="email" id="email" placeholder="Enter your email address" value = {email}
+            onChange={(e) => setemail(e.target.value)}
+            className={error? "error" :""}/>
 
-
-            <p className="or">pr use one of these options</p>
+            {error && <span className="error-text">Enter your correct email address </span>}
+            <button  onClick= {handlefalsemail} className="btn-email">Continue with email</button>
+            <p className="para">or use one of these options</p>
             <div className="btn">
-                <button className="social-btn "></button>
-                <button className="social-btn "></button>
-                <button className="social-btn"></button>
+                <button className="social-btn "><img src="/images/google.png" alt="google" /></button>
+                <button className="social-btn "><img src="/images/facebook.png" alt="facebook" /></button>
             </div>
             <p className="term">
                 By signing in or creating an account, you agree with our <a href="#">terms & Conditions</a> and <a href="#">Privacy Statement</a>
             </p>
-            <footer>Copyright 2006-2025 - Booking.com</footer>
+            <footer className="footer">All rights reserved.<br/>Copyright (2006-2025) - Booking.com</footer>
             </div>
         </div>
     )

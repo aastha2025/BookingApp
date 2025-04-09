@@ -1,7 +1,106 @@
 .signin-container {
     max-width: 400px;
-    margin: 0 auto;
+    margin: auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin: 30px 0;
+    color: rgb(98, 96, 96);
+  }
+
+  label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  input:hover{
+    border: 1px solid #006CE4;
+  }
+
+  input.error {
+    border-color: red;
+  }
+  
+  .error-text {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+
+  }
+  
+  .btn-email{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color:#006CE4 ;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+
+  }
+
+  .para{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 15px;
+  }
+
+.btn{
+    display: flex;
+    justify-content: space-around;
 }
 
+.social-btn {
+    border: none;
+    font-size: 20px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    background: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.social-btn img{
+    width: 30px;
+    height: 30px;
+}
+.term{
+    font-size: 12px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.term a{
+    color: #006CE4;
+    text-decoration: none;
+}
+
+.footer{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    color: grey;
+}
