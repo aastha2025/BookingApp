@@ -4,7 +4,7 @@ import style from './Flight.module.css';
 const Flight = () => {
   return (
     <div>
-      <h1 className={style.heading}>login</h1>
+      <h1 className={style.heading}>Flight</h1>
     </div>
   )
 }
