@@ -30,12 +30,12 @@
      text-align: left;
   }
  
-  p{
+  .p-home{
      color:white;
      font-size: 30px;
      margin-bottom: 20px;
   }
-  .search-btn{
+  .search-btn-find{
      background-color:#006CE4;
      color: white;
      border-radius: 5px;

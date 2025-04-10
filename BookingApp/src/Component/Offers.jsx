@@ -38,7 +38,7 @@ function Offers() {
         <div className="offer">
             <div className="container">
                 <h2>Offers</h2>
-                <p className="para">Promotions, deals, and special offers for you</p>
+                <p className="para-p1">Promotions, deals, and special offers for you</p>
                 <Slider {...settings} className="carousel">
                     {coupons.map((coupon) => (
                         <div className="coupon-card" key={coupon.id}>
