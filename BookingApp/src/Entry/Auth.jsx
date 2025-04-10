@@ -1,8 +1,11 @@
 import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import "./Auth.css";
+
 function Auth(){
     const [email, setemail] = useState("");
     const [error, setError] = useState("");
+    const navigate = useNavigate();
 
     const isValidEmail = (email) =>{
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -19,7 +22,7 @@ function Auth(){
         else{
             setError("");
             console.log("Email submitted successfully", email)
-
+            navigate("/Otp",{state: {email}});
         }
     };
     return (

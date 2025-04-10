@@ -24,7 +24,7 @@ function Navbar() {
                     </div>
                 </div>
                 <div className={`lowernavbar ${menuOpen ? "open" : ""}`}>
-                    <a className="nav-a"><img src="/images/icons8-bed-50.png" alt="Stays" className='nav-img' /> Stays</a>
+                    <a href='/' className="nav-a"><img src="/images/icons8-bed-50.png" alt="Stays" className='nav-img' /> Stays</a>
                     <a href='/flight' className="nav-a"><img src="/images/icons8-plane-50.png" alt="flights" className='nav-img' /> Flights</a>
                     <a className="nav-a"><img src="/images/icons8-plane-50.png" alt="flights + hotels" className='nav-img' /> Flight + Hotel</a>
                     <a className="nav-a"><img src="/images/icons8-car-30.png" alt="car rental" className='nav-img' /> Car rental</a>
