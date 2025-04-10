@@ -1,8 +1,11 @@
+
 import React, {useEffect, useState} from "react";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setPhoto, setUsername, setEmail } from "../feature/user/userSlice";
+import {useNavigate} from "react-router-dom";
+
 function Auth(){
     const [email, setemail] = useState("");
     const [error, setError] = useState("");
@@ -16,7 +19,6 @@ function Auth(){
         }
     }); 
     
-
     const isValidEmail = (email) =>{
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
@@ -40,7 +42,7 @@ function Auth(){
             console.log("Photo set in Redux:", '/images/d1.jpg');
             dispatch(setEmail(email));
             console.log("Email submitted successfully", email)
-
+            navigate("/Otp",{state: {email}});
         }
     };
     return (
@@ -53,7 +55,8 @@ function Auth(){
             onChange={(e) => setemail(e.target.value)}
             className={error? "error" :""}/>
 
-            {error && <span className="error-text">{error} </span>}
+
+            {error && <span className="error-text">{error}</span>}
             <button  onClick= {handlefalsemail} className="btn-email">Continue with email</button>
             <p className="para">or use one of these options</p>
             <div className="btn">

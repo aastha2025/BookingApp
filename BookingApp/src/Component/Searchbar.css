@@ -1,7 +1,7 @@
 .searchbar {
     position: absolute;
     width: 74vw;
-    bottom: -70px;
+    bottom: -100px;
 }
 
 .upper-searchbar {
@@ -16,34 +16,38 @@
     justify-content: space-between;
 }
 
-.sec1, .sec2{
-    width: 100%;
-    padding: 7px 7px;
-    border-radius: 5px;
-    border-color: white;
-    background-color: white;
-    font-weight: 400;
+.sec1{
     display: flex;
-    gap: 5px;
+    padding: 5px 5px;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
 }
+
+.sec2
+    {
+        display: flex;
+        padding-left: 5px;
+        padding-right: 5px;
+        /* padding-left: 7px; */
+        align-items: center;
+        background-color: white;
+        border-radius: 5px;
+        width: 100%;
+      
+    }
+    
 
 .sec3 {
     display: flex;
-    /* padding: 5px 5px; */
-    padding-left: 7px;
+    padding: 5px 5px;
     align-items: center;
     background-color: white;
     border-radius: 5px;
     width: 100%;
 }
 
-
-
-.sec2 {
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-}
 .sec2 img, .sec1 img, .sec3 img {
     width: 30px;
     height: 30px;
@@ -75,13 +79,6 @@ input[type="text"] {
     box-sizing: border-box; /* Ensures padding and borders are included in the width */
 }
 
-/* .sec1 {
-    padding: 12px 90px;
-      margin-right: 2px;
-    margin-left: 6px;
-      cursor:text;
-
-} */
 
 .sec1, .sec2, .sec3:hover {
     border-color: orange;
