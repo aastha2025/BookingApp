@@ -87,6 +87,7 @@
   border-radius: 4px;
   transition: 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .login:hover {
@@ -223,3 +224,61 @@
 .modal-content button:hover {
   background: #0056b3;
 }
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between photo and button */
+  position: relative;
+}
+
+.user-photo-container {
+  position: relative;
+  width: 50px; /* Fixed width to prevent layout shifts */
+  height: 60px; /* Includes space for username */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.username {
+  position: absolute;
+  top: 60px; /* Places username below the image */
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  display: none; /* Initially hidden */
+}
+
+.user-photo-container:hover .username {
+  display: block; /* Show username on hover */
+}
+
+.signout-btn {
+  margin-left: auto; /* Align to the right */
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.signout-btn:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+
+  .auth-links {
+    display: flex;
+    gap: 10px;
+  }
