@@ -1,17 +1,33 @@
-import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+
+import React, {useEffect, useState} from "react";
 import "./Auth.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setPhoto, setUsername, setEmail } from "../feature/user/userSlice";
+import {useNavigate} from "react-router-dom";
 
 function Auth(){
     const [email, setemail] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
-
+    const dispatch = useDispatch();
+    const username = useSelector((state) => state.user.username);
+    useEffect(() => {
+        if (username) {
+            console.log("Redirecting to home as username exists:", username); // Debugging log
+            navigate("/");
+        }
+    }); 
+    
     const isValidEmail = (email) =>{
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     };
-
+    const generateUsername = (email) => {
+        if (!email.includes("@")) return "InvalidUser"; // Default for invalid emails
+        const username = email.split("@")[0].replace(/[^a-zA-Z0-9]/g, ""); // Remove special characters
+        return username.slice(0, 10); // Limit to 10 characters
+    };
     const handlefalsemail = () => {
         if(!email){
             setError("Email address cannot be empty");
@@ -21,6 +37,10 @@ function Auth(){
         }
         else{
             setError("");
+            dispatch(setUsername(generateUsername(email)));
+            dispatch(setPhoto('/images/d1.jpg'));
+            console.log("Photo set in Redux:", '/images/d1.jpg');
+            dispatch(setEmail(email));
             console.log("Email submitted successfully", email)
             navigate("/Otp",{state: {email}});
         }
@@ -34,6 +54,7 @@ function Auth(){
             <input type="email" id="email" placeholder="Enter your email address" value = {email}
             onChange={(e) => setemail(e.target.value)}
             className={error? "error" :""}/>
+
 
             {error && <span className="error-text">{error}</span>}
             <button  onClick= {handlefalsemail} className="btn-email">Continue with email</button>

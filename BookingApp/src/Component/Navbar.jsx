@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
+import "./Navbar.css";
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setUsername, setPhoto, setEmail, clearData } from '../feature/user/userSlice';
 import "./Navbar.css";
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const username = useSelector((state) => state.user.username);
+    const photo = useSelector((state) => state.user.photo);
+    console.log("Photo in Navbar:", photo);
+    const dispatch = useDispatch();
     return (
         <nav className="navbar">
             <div className="container">
@@ -19,8 +27,31 @@ function Navbar() {
                         <button className="nav-item"><img src="/images/india.png" alt="india" className='icons' /></button>
                         <button className="nav-item"><img src="/images/icons8-unverified-account-50.png" alt="ques" className='icons' /></button>
                         <button className="nav-item">List your property</button>
-                        <a href='/auth' className="login">Register</a>
-                        <button className="login">Sign In</button>
+                        {username ? (
+                            <div className="user-info">
+                                <div className="user-photo-container">
+                                    {/* alert({photo}); */}
+                                    
+                                    <img src={photo} alt="User" className="user-photo" />
+                                    <span className="username">hello, {username}</span>
+                                </div>
+                                <button
+                                    className="signout-btn"
+                                    onClick={() => {
+                                        dispatch(clearData());
+                                    }}
+                                >
+                                    Sign Out
+                                </button>
+                            </div>
+
+
+                        ) : (
+                            <div className="auth-links">
+                                <a href='/auth' className="login">Register</a>
+                                <a href='/auth' className="login">Sign In</a>
+                            </div>
+                        )}
                     </div>
                 </div>
                 <div className={`lowernavbar ${menuOpen ? "open" : ""}`}>
