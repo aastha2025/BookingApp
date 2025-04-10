@@ -1,7 +1,5 @@
-
 import React, {useEffect, useState} from "react";
 import "./Auth.css";
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setPhoto, setUsername, setEmail } from "../feature/user/userSlice";
 import {useNavigate} from "react-router-dom";
