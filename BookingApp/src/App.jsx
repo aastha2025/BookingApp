@@ -6,6 +6,7 @@ import Flight from './Component/Flight/Flight';
 import Auth from './Entry/Auth';
 import Otp from './Entry/Otp';
 import Hotel from './Component/Hotels/Hotel';
+import NotFound from './Component/Errory/NotFound';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/auth' element={<Auth />} />
           <Route path='/Otp' element={<Otp />} />
           <Route path='/hotel' element = {<Hotel/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>
