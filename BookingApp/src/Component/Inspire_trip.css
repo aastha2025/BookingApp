@@ -1,4 +1,4 @@
-.inspire-trip{
+.inspire-trip {
     padding: 10px;
     text-align: start;
     margin-top: 5px;
@@ -14,142 +14,211 @@
 h2 {
     font-size: 24px;
     color: #333;
+    margin-bottom: 20px;
 }
 
-.inspire-trip-carousel{
+.inspire-trip-carousel {
     max-width: 100%;
+    padding: 10px 0;
 }
 
-.inspire-trip-card{
+.inspire-trip-card {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    text-align:start;
+    text-align: center;
     padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    margin: 10px; /* Add space between cards */
 }
 
-.inspire-trip-image  {
+.inspire-trip-card:hover {
+    transform: scale(1.03);
+}
+
+.inspire-trip-image {
     width: 100%;
-    max-width: 263px;
-    height: 240px;
+    max-width: 300px;
+    height: auto;
     overflow: hidden;
     border-radius: 8px;
-
+    margin-bottom: 15px;
 }
-.inspire-trip-image img{
+
+.inspire-trip-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
+
 .inspire-trip-card h5 {
-    font-size: 16px;
-    color: black;
+    color: #333; 
     font-weight: bold;
-    justify-content: flex-start;
-    margin-top: 8px;
-    width: 263px;
-    height: 24px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
-.inspire-trip-desc{
+
+.inspire-trip-desc {
     font-size: 14px;
-    color: #777;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    width: 263px;
-    height: 40px;
+    color: #555;
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+    max-width: 100%; /* Ensures content stays within bounds */
+    margin-top: 10px;
 }
+
 .inspire-trip-carousel .slick-prev,
 .inspire-trip-carousel .slick-next {
     z-index: 2;
+    font-size: 20px;
 }
 
 .inspire-trip-carousel .slick-prev::before,
 .inspire-trip-carousel .slick-next::before {
-    font-size: 45px;
-    color: #b3b0b0; 
-    border-width: 0 3px 3px 0;
-    /* border: 1px solid #ccc; */
-    /* padding: 5px; */
-}
-.inspire-trip-carousel .slick-prev:hover::before,
-.inspire-trip-carousel .slick-next:hover::before {
-    color:  #5e5a5a;
-    border-color:#beb7b7; 
+    font-size: 30px;
+    color: #b3b0b0;
 }
 
-/* Adjust position of the right arrow */
+.inspire-trip-carousel .slick-prev:hover::before,
+.inspire-trip-carousel .slick-next:hover::before {
+    color: #5e5a5a;
+}
+
 .inspire-trip-carousel .slick-next {
-    top: 130px;
-    /* left: 1110px; */
-    right: 0px; 
-    transform: translateX(-30%);
-    z-index: 2; 
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
 }
 
 .inspire-trip-carousel .slick-prev {
-    top: 130px;
-    left: 0px;
-    transform: translateX(-100%);
-    z-index: 2;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
 }
 
+/* Add padding to prevent overlap */
+.inspire-trip-carousel .slick-slide {
+    padding: 10px;
+    box-sizing: border-box;
+}
 
+.inspire-trip-carousel .slick-list {
+    overflow: hidden; /* Prevent overflowing of slides */
+}
+
+.inspire-trip-carousel .slick-track {
+    display: flex;
+    align-items: stretch; /* Ensure cards stretch evenly */
+}
+
+/* Responsive Styling */
 @media (max-width: 1200px) {
-    .inspire-trip-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .container {
+        max-width: 95%;
     }
 
-    .inspire-trip-image {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .inspire-trip-desc {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 900px) {
-    .inspire-trip-card {
-        padding: 10px;
-    }
-
-    .inspire-trip-image {
-        height: 220px;
-    }
-
-    .inspire-trip-carousel .slick-prev,
-    .inspire-trip-carousel .slick-next {
-        top: 40%;
-    }
-}
-
-@media (max-width: 600px) {
     h2 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .inspire-trip-card {
-        padding: 8px;
+        padding: 12px;
     }
 
     .inspire-trip-image {
-        height: 200px;
+        max-width: 250px;
     }
 
     .inspire-trip-desc {
         font-size: 13px;
     }
+}
+
+@media (max-width: 900px) {
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .inspire-trip-card {
+        padding: 10px;
+    }
+
+    .inspire-trip-image {
+        max-width: 200px;
+    }
+
+    .inspire-trip-desc {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    .inspire-trip-card {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .inspire-trip-image {
+        max-width: 180px;
+    }
+
+    .inspire-trip-desc {
+        font-size: 12px;
+    }
 
     .inspire-trip-carousel .slick-prev,
     .inspire-trip-carousel .slick-next {
-        font-size: 28px;
+        font-size: 24px;
+        top: 45%;
     }
 }
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .inspire-trip-card {
+        padding: 5px;
+    }
+
+    .inspire-trip-image {
+        max-width: 150px;
+    }
+
+    .inspire-trip-desc {
+        font-size: 11px;
+    }
+
+    .inspire-trip-carousel .slick-prev,
+    .inspire-trip-carousel .slick-next {
+        display: none;
+    }
+}
+
+.unique-prop-p1 {
+    margin-top: 0px;
+    padding-left: 8px;
+}
+h5 {
+    padding-top: 0px;
+}
+
+/* h5, p {
+    padding: 40px;
+} */

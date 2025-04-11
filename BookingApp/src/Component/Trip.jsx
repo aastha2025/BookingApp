@@ -246,10 +246,18 @@ function Trip() {
             distance: "1,167 km away",
             category: "Food"
         },
+        {
+            id: 33,
+            image: "/images/d3.jpg",
+            name: "Mumbai",
+            distance: "1,167 km away",
+            category: "Romance"
+        },
     ];
 
     const filteredTrips = selectedCategory? trips.filter((trip) => trip.category === selectedCategory): trips;
     const slidesToShow = Math.min(6, filteredTrips.length);
+    
     const settings = {
         speed: 500,
         slidesToShow: slidesToShow,
@@ -274,8 +282,8 @@ function Trip() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: Math.min(1, filteredTrips.length),
-                    infinite: filteredTrips.length > 1,
+                    slidesToShow: Math.min(2, filteredTrips.length),
+                    infinite: filteredTrips.length > 2,
 
                 },
             },

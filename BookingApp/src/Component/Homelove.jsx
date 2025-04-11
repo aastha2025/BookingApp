@@ -14,7 +14,7 @@ function Homelove() {
             name: "Aparthotel Stare Miasto",
             rating: "8.8",
             feedback: "Excellent",
-            review:"3,165 reviews",
+            review: "3,165 reviews",
             price: "Starting from",
             rupee: " 9,211"
         },
@@ -25,10 +25,10 @@ function Homelove() {
             name: "7Seasons Apartments Budapest",
             rating: "8.8",
             feedback: "Excellent",
-            review:"11,447 reviews",
+            review: "11,447 reviews",
             price: "Starting from",
             rupee: " 8,024"
-       },
+        },
 
         {
             id: 3,
@@ -37,10 +37,10 @@ function Homelove() {
             name: "Numa I Vita Apartments",
             rating: "9.0",
             feedback: "Wonderful",
-            review:"1,399 reviews",
+            review: "1,399 reviews",
             price: "Starting from",
             rupee: "19,556"
-         },
+        },
 
         {
             id: 4,
@@ -49,7 +49,7 @@ function Homelove() {
             name: "GLeman Locke",
             rating: "8.8",
             feedback: "Excellent",
-            review:"720 reviews",
+            review: "720 reviews",
             price: "Starting from",
             rupee: " 15,580"
         },
@@ -60,10 +60,10 @@ function Homelove() {
             name: "Sugar Loft Apartments",
             rating: "8.1",
             feedback: "Very Good",
-            review:"600 reviews",
+            review: "600 reviews",
             price: "Starting from",
             rupee: "3,083"
-         },
+        },
         {
             id: 6,
             image: "/images/h6.webp",
@@ -71,112 +71,115 @@ function Homelove() {
             name: "The Apartments b the Sloane Club",
             rating: "9.1",
             feedback: "Wonderful",
-            review:"247 reviews",
+            review: "247 reviews",
             price: "Starting from",
             rupee: "83,453"
-         },
-         {
+        },
+        {
             id: 7,
             image: "/images/h7.webp",
             title: "City of London, United Knigdom, London",
             name: "Cheval Three Quays at The Tower of London",
             rating: "9.4",
             feedback: "Wonderful",
-            review:"706 reviews",
+            review: "706 reviews",
             price: "Starting from",
             rupee: "50,018"
-         },
-         {
+        },
+        {
             id: 8,
             image: "/images/h8.webp",
             title: "Santa Maria Maior, Portugal, Lisbon",
             name: "Flora Chiado Apartments",
             rating: "9.8",
             feedback: "Exceptional",
-            review:"199 reviews",
+            review: "199 reviews",
             price: "Starting from",
             rupee: "47,009"
-         },
-         {
+        },
+        {
             id: 9,
             image: "/images/h9.webp",
             title: "Prague 3, Czech Republic, Prague",
             name: "Baranova Apartmnets",
             rating: "9.6",
             feedback: "Exceptional",
-            review:"9.6 reviews",
+            review: "9.6 reviews",
             price: "Starting from",
             rupee: "19,062"
-         },
-         {
+        },
+        {
             id: 10,
             image: "/images/h10.webp",
             title: "Amsterdam City Center, Netherlands, Amsterdam",
             name: "Zoku Amsterdam",
             rating: "9.0",
             feedback: "Wonderful",
-            review:"2,885 reviews",
+            review: "2,885 reviews",
             price: "Starting from",
             rupee: "18,951"
-         }
-         ];
-
-         const settings = {
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                    },
-                },
-                {
-                    breakpoint: 890,
-                    settings: {
-                        slidesToShow: 2,
-                    },
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                    },
-                },
-            ],
-        };
-        
-    
-        return (
-            <div className="homelove">
-                <div className="container">
-                    <h2>Home Guest Love</h2>
-                    <Slider {...settings} className="homelove-carousel">
-                        {homeloves.map((homelove) => (
-                            <div className="homelove-card" key={homelove.id}>
-                                <div className="homelove-image">
-                                    <img src={homelove.image} alt={homelove.name} />
-                                </div>
-                                <h5 className="homelove-h">{homelove.name}</h5>
-                                <p className="homelove-p1">{homelove.title}</p>
-                                <div className="homelove-view">
-                                    <button className="homelove-view-btn">{homelove.rating}</button>
-                                    <p className="homelove-view-p">{homelove.feedback}</p>
-                                    <p className="homelove-view-review">{homelove.review}</p>
-                                </div>
-                                <div className="homelove-price">
-                                    <p className="homelove-price-p">{homelove.price}</p>
-                                    <h5 className="homelove-rupee">{homelove.rupee}</h5>
-                                </div>
-                            </div>
-                        ))}
-                    </Slider>
-                </div>
-            </div>
-        );
-
         }
+    ];
 
-        export default Homelove;
+    const settings = {
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 890,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
+
+    return (
+        <div className="homelove">
+            <div className="container">
+                <h2>Home Guest Love</h2>
+                <Slider {...settings} className="homelove-carousel">
+                    {homeloves.map((homelove) => (
+                        <div className="homelove-card" key={homelove.id}>
+                            <div className="homelove-image">
+                                <img src={homelove.image} alt={homelove.name} />
+                            </div>
+                            <h5 className="homelove-h">{homelove.name}</h5>
+                            <p className="homelove-p1">
+                                {homelove.title.length > 20 ? `${homelove.title.slice(0, 20)}...` : homelove.title}
+                            </p>
+
+                            <div className="homelove-view">
+                                <span className="homelove-view-btn">{homelove.rating}</span>
+                                <span className="homelove-view-p">{homelove.feedback}</span>
+                                <span className="homelove-view-review">{homelove.review}</span>
+                            </div>
+                            <div className="homelove-price">
+                                <span className="homelove-price-p">{homelove.price}</span>
+                                <span className="homelove-rupee">{homelove.rupee}</span>
+                            </div>
+                        </div>
+                    ))}
+                </Slider>
+            </div>
+        </div>
+    );
+
+}
+
+export default Homelove;
