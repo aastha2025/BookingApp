@@ -21,6 +21,7 @@ function Auth(){
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     };
+
     const generateUsername = (email) => {
         if (!email.includes("@")) return "InvalidUser"; // Default for invalid emails
         const username = email.split("@")[0].replace(/[^a-zA-Z0-9]/g, ""); // Remove special characters
@@ -52,7 +53,6 @@ function Auth(){
             <input type="email" id="email" placeholder="Enter your email address" value = {email}
             onChange={(e) => setemail(e.target.value)}
             className={error? "error" :""}/>
-
 
             {error && <span className="error-text">{error}</span>}
             <button  onClick= {handlefalsemail} className="btn-email">Continue with email</button>
