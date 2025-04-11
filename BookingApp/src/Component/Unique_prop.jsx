@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Unique_prop.css";
+import "./Homelove.css"
 
 
 function Unique_prop() {
@@ -195,7 +196,7 @@ function Unique_prop() {
                     },
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 400,
                     settings: {
                         slidesToShow: 1,
                     },
@@ -209,22 +210,22 @@ function Unique_prop() {
                 <div className="container">
                     <h2>Stay on our unique properties</h2>
                     <p className="unique-prop-p">From castles and villas to boats and igloos, we have it all</p>
-                    <Slider {...settings} className="unique-prop-carousel">
+                    <Slider {...settings} className="homelove-carousel">
                         {unique_props.map((unique_prop) => (
-                            <div className="unique-prop-card" key={unique_prop.id}>
-                                <div className="unique-prop-image">
+                            <div className="homelove-card" key={unique_prop.id}>
+                                <div className="homelove-image">
                                     <img src={unique_prop.image} alt={unique_prop.name} />
                                 </div>
-                                <h5 className="unique-prop-h">{unique_prop.name}</h5>
+                                <h5 className="homelove-h">{unique_prop.name}</h5>
                                 <p className="unique-prop-p1">{unique_prop.title}</p>
-                                <div className="unique-prop-view">
-                                    <button className="unique-prop-view-btn">{unique_prop.rating}</button>
-                                    <p className="unique-prop-view-p">{unique_prop.feedback}</p>
-                                    <p className="unique-prop-view-review">{unique_prop.review}</p>
+                                <div className="homelove-view">
+                                    <span className="homelove-view-btn">{unique_prop.rating}</span>
+                                    <span className="homelove-view-p">{unique_prop.feedback}</span>
+                                    <span className="homelove-view-review">{unique_prop.review}</span>
                                 </div>
-                                <div className="unique-prop-price">
-                                    <p className="unique-prop-price-p">{unique_prop.price}</p>
-                                    <h5 className="unique-prop-rupee">{unique_prop.rupee}</h5>
+                                <div className="homelove-price">
+                                    <span className="homelove-p">{unique_prop.price}</span>
+                                    <span className="homelove-rupee">{unique_prop.rupee}</span>
                                 </div>
                             </div>
                         ))}
