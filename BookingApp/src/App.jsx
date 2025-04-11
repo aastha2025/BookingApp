@@ -5,6 +5,7 @@ import Navbar from './Component/Navbar';
 import Flight from './Component/Flight/Flight';
 import Auth from './Entry/Auth';
 import Otp from './Entry/Otp';
+import Hotel from './Component/Hotels/Hotel';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path='/flight' element={<Flight />} />
           <Route path='/auth' element={<Auth />} />
           <Route path='/Otp' element={<Otp />} />
-
+          <Route path='/hotel' element = {<Hotel/>} />
         </Routes>
       </Router>
     </div>
