@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./India.css";
-
+import "./Trip.css";
 
 function India() {
 
@@ -81,7 +81,7 @@ function India() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                 },
             },
             {
@@ -103,16 +103,16 @@ function India() {
     return (
         <div className="india">
             <div className="container">
-                <h2 className="india-h">Explore India</h2>
-                <p className="india-p">these popular destinations have a lot to offer</p>
-                  <Slider {...settings} className="india-carousel">
+                <h2 className="trip-h">Explore India</h2>
+                <p className="trip-p">these popular destinations have a lot to offer</p>
+                  <Slider {...settings} className="trip-carousel">
                     {indias.map((india) => (
-                        <div className="india-card" key = {india.id}>
-                            <div className="india-image">
+                        <div className="trip-card" key = {india.id}>
+                            <div className="trip-image">
                                 <img src={india.image} alt={india.name} />
                             </div>
                             <h5>{india.name}</h5>
-                            <p className="india-dis">{india.properties}</p>
+                            <p className="trip-dis">{india.properties}</p>
                         </div>
                     ))}
 

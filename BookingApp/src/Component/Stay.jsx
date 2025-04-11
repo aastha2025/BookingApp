@@ -96,7 +96,7 @@ function Stay() {
                     },
                 },
                 {
-                    breakpoint: 600,
+                    breakpoint: 400,
                     settings: {
                         slidesToShow: 1,
                     },
@@ -110,8 +110,8 @@ function Stay() {
                 <div className="container">
                     <h2>Looking for the perfect stay?</h2>
                     <p className="stay-p">Travelers with similar searches booked these properties</p>
-                    <Slider {...settings} className="stay-carosuel ">
-                        {stays.map((stay) => (
+                    <Slider {...settings} className="stay-carosuel">
+                       {stays.map((stay) => (
                             <div className="stay-card" key={stay.id}>
                                 <div className="stay-image">
                                     <img src={stay.image} alt={stay.name} />
@@ -119,13 +119,13 @@ function Stay() {
                                 <p className="stay-p1">{stay.title}</p>
                                 <h5 className="stay-h">{stay.name}</h5>
                                 <div className="stay-view">
-                                    <button className="stay-view-btn">{stay.rating}</button>
-                                    <p className="stay-view-p">{stay.feedback}</p>
-                                    <p className="stay-view-review">{stay.review}</p>
+                                    <span className="stay-view-btn">{stay.rating}</span>
+                                    <span className="stay-view-p">{stay.feedback}</span>
+                                    <span className="stay-view-review">{stay.review}</span>
                                 </div>
                                 <div className="stay-price">
-                                    <p className="stay-price-p">{stay.price}</p>
-                                    <h5 className="stay-rupee">{stay.rupee}</h5>
+                                    <span className="stay-price-p">{stay.price}</span>
+                                    <span className="stay-rupee">{stay.rupee}</span>
                                 </div>
                             </div>
                         ))}

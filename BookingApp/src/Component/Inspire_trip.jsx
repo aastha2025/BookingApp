@@ -20,7 +20,7 @@ function Inspire_trip(){
         {
             id:3,
             image:"/images/is3.webp",
-            title: "5 vacation homes for a Thanksgiving getaway",
+            title: "5 vacation homes for a Thanks giving getaway",
             desc: "Enjoy Thankgiving dinner at these vacation homes."
         },        {
             id:4,
@@ -50,7 +50,7 @@ function Inspire_trip(){
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
                 },
@@ -69,7 +69,9 @@ function Inspire_trip(){
                                 <div className="inspire-trip-image">
                                     <img src={inspire_trip.image} alt={inspire_trip.title}/>
                                 </div>
-                                <h5>{inspire_trip.title}</h5>
+                                <h5 className="inspire-trip-title">
+                                    {inspire_trip.title.length > 30 ? `${inspire_trip.title.slice(0,30)}...`: inspire_trip.title}
+                                </h5>
                                 <p className="inspire-trip-desc">{inspire_trip.desc}</p>
                             </div>
                         ))}

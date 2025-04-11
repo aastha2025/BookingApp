@@ -1,4 +1,4 @@
-.homelove{
+.homelove {
     padding: 10px;
     text-align: start;
     margin-top: 5px;
@@ -17,32 +17,31 @@ h2 {
     margin-bottom: 10px;
 }
 
-
-.homelove-carosuel{
+.homelove-carousel {
     max-width: 100%;
 }
 
 .homelove-carousel .slick-slide {
-    padding: 0 10px; 
+    padding: 0 10px;
     box-sizing: border-box;
 }
 
-.homelove-card{
-    background: white;
+.homelove-card {
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px #ccc;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     text-align: start;
+    padding: 10px;
+    height: 100%;
     width: 300px;
-    
 }
 
-.homelove-image img{
-    width: 263px;
-    height: 210px;
+.homelove-image img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
 }
@@ -51,7 +50,7 @@ h2 {
     font-size: 14px;
     color: #777;
     margin: 8px;
-   }
+}
 
 .homelove-h {
     font-size: 16px;
@@ -63,49 +62,56 @@ h2 {
     text-overflow: ellipsis;
     max-width: 100%;
     display: block;
-    word-wrap: break-word;
 }
 
 .homelove-view {
     display: flex;
-    align-items:flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-    margin: 10px ;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
 }
+
 .homelove-view-btn {
     background-color: #003B95;
     color: white;
     border: none;
-    padding: 5px 6px;
-    border-radius: 5px;
-    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: bold;
-    cursor: default;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.homelove-view-btn:hover {
+    background-color: #0057d9;
 }
 
 .homelove-view-p {
     font-size: 14px;
     color: #444;
     font-weight: bold;
+    margin: 0;
 }
 
 .homelove-view-review {
     font-size: 12px;
     color: #777;
+    margin: 0;
 }
 
 .homelove-price {
     display: flex;
-    justify-content: flex-end;
-    text-align: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
 }
 
 .homelove-price-p {
     font-size: 14px;
     color: #555;
-    
 }
 
 .homelove-rupee {
@@ -113,8 +119,6 @@ h2 {
     font-weight: bold;
     color: black;
 }
-
-
 .homelove-carousel .slick-prev,
 .homelove-carousel .slick-next {
     z-index: 2;
@@ -122,69 +126,77 @@ h2 {
 
 .homelove-carousel .slick-prev::before,
 .homelove-carousel .slick-next::before {
-    font-size: 45px;
-    color: #b3b0b0; 
-    border-width: 0 3px 3px 0;
-    /* border: 1px solid #ccc; */
-    /* padding: 5px; */
-}
-.homelove-carousel .slick-prev:hover::before,
-.homelove-carousel .slick-next:hover::before {
-    color:  #5e5a5a;
-    border-color:#beb7b7; 
+    font-size: 30px;
+    color: #b3b0b0;
 }
 
-/* Adjust position of the right arrow */
+.homelove-carousel .slick-prev:hover::before,
+.homelove-carousel .slick-next:hover::before {
+    color: #5e5a5a;
+}
+
 .homelove-carousel .slick-next {
-    top: 150px;
-    /* left: 1110px; */
-    right: 0px; 
-    transform: translateX(-30%);
-    z-index: 2; 
+    top: 35%;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 .homelove-carousel .slick-prev {
-    top: 150px;
-    left: 0px;
-    transform: translateX(-100%);
-    z-index: 2;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .homelove-card {
+        width: 250px;
+    }
 }
 
 @media (max-width: 890px) {
     .homelove-card {
-        width: 100% !important;
-        flex-direction: column;
-        padding: 10px;
+        width: 100%;
     }
 
     .homelove-image img {
-        width: 100%;
         height: auto;
-        border-radius: 10px;
     }
 
-    .homelove-h,
-    .homelove-p1,
-    .homelove-view,
-    .homelove-price {
-        margin-left: 5px;
-        margin-right: 5px;
-        text-align: start;
-    }
-
-    .homelove-price {
-        justify-content: space-between;
+    .homelove-view {
+        flex-direction: column;
         align-items: center;
-        flex-direction: row;
-        gap: 10px;
+        justify-content: center; /* Center horizontally */
+        gap: 12px;
+    }
+
+    .homelove-view-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .homelove-price {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .homelove-carousel .slick-prev,
     .homelove-carousel .slick-next {
         top: 45%;
     }
+}
 
-    .homelove-view {
-        flex-wrap: wrap;
+@media (max-width: 600px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .homelove-view-btn {
+        font-size: 10px;
+    }
+
+    .homelove-price {
+        padding: 10px;
+        gap: 5px;
     }
 }
