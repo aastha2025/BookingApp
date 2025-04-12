@@ -70,7 +70,7 @@ function Inspire_trip(){
                                     <img src={inspire_trip.image} alt={inspire_trip.title}/>
                                 </div>
                                 <h5 className="inspire-trip-title">
-                                    {inspire_trip.title.length > 30 ? `${inspire_trip.title.slice(0,30)}...`: inspire_trip.title}
+                                    {inspire_trip.title.length > 20 ? `${inspire_trip.title.slice(0,20)}...`: inspire_trip.title}
                                 </h5>
                                 <p className="inspire-trip-desc">{inspire_trip.desc}</p>
                             </div>
