@@ -1,4 +1,8 @@
 * {
     box-sizing: border-box;
   }
-  
+
+
+#root {
+  overflow-x: hidden;
+}
