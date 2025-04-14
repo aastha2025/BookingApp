@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import style from './Flight.module.css';
 import gb from './global.module.css';
 import Brazil from './Brazil';
+import FlightSlick from './FlightSlick';
 
 const Flight = () => {
   const [activeCard, setActiveCard] = useState(null);
@@ -161,6 +162,9 @@ const Flight = () => {
             <Brazil sr = "/images/ancient.webp" head="Manaus" subHead="Nature, wildlife, adventure" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
           </div>
         </div>
+
+
+        <FlightSlick />
       </div>
     </div>
   );
