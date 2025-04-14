@@ -1,146 +1,160 @@
-import React, { useEffect, useState } from "react";
-import "./Searchbar.css";
 
-function Searchbar() {
-    const [location, setLocation] = useState("");
-    const [startDate, setStartDate] = useState("");
-    const [endDate, setEndDate] = useState("");
-    const [adult, setAdult] = useState(2);
-    const [children, setChildren] = useState(0);
-    const [room, setRoom] = useState(1);
-    const [showCard, setShowCard] = useState(false); // State to toggle card visibility
 
-    useEffect(() => {
-        if (startDate && endDate && startDate > endDate) {
-            alert(`Check-in date must be before check-out date`);
-        }
-    }, [startDate, endDate]);
 
-    const toggleCard = () => {
-        setShowCard((prev) => !prev); // Toggle card visibility
-    };
 
-    function decreaseAdult() {
-        if(adult > 1)
-        setAdult(adult-1);
-        return ;
-    }
-    function increaseAdult() {
-        setAdult(adult+1);
-        return ;
-    }
-    function decreaseChild() {
-        if(children > 0)
-        setChildren(children-1);
-        return ;
-    }
-    function increaseChild() {
-        setChildren(children+1);
-        return ;
-    }
-    function decreaseRoom() {
-        if(room > 1)
-        setRoom(room-1);
-        return ;
-    }
-    function increaseRoom() {
-        setRoom(room+1);
-        return ;
-    }
-    // useEffect(()=>{
-    //     if()
-    // },[]);
-    return (
-        <div className="container">
-            <div className="searchbar">
-                <div className="upper-searchbar">
-                    <div className="sec1">
-                        <img src="/images/icons8-bed-32.png" alt="" />
-                        <input
-                            type="text"
-                            placeholder="Where are you going?"
-                            value={location}
-                            onChange={(e) => setLocation(e.target.value)}
-                        />
-                    </div>
-                    <div className="sec2">
-                        <img src="/images/icons8-sign-up-in-calendar-50.png" alt="" />
-                        <div className="daty">
-                            <input
-                                type="date"
-                                value={startDate}
-                                onChange={(e) => setStartDate(e.target.value)}
-                            />
-                            <span>--</span>
-                            <input
-                                type="date"
-                                value={endDate}
-                                onChange={(e) => setEndDate(e.target.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className="sec3" onClick={toggleCard}>
-                        <img src="/images/icons8-bed-32.png" alt="" />
-                        <div className="stay">
-                            <div className="adult">{adult} adult</div>
-                            <div className="adult">{children} children</div>
-                            <div className="adult">{room} room</div>
-                        </div>
-                    </div>
-                    <button className="sec-1">Search</button>
-                </div>
-                <div className="lower-searchbar">
-                    <div className="lowerLeft">
-                        <input type="checkbox" id="flights" className="checkbox" />
-                        <label htmlFor="flights" className="check-box-text">I'm looking for flights</label>
-                    </div>
-                    {showCard && (
-                        <div className="cardy">
-                            <div className="data">
-                                <div className="adult1">
-                                    <p>Adult</p>
-                                    <div className="myBtn">
-                                        <p onClick={decreaseAdult}>-</p>
-                                        <p>{adult}</p>
-                                        <p onClick={increaseAdult}>+</p>
-                                    </div>
-                                </div>
-                                <div className="adult1">
-                                    <p>Children</p>
-                                    <div className="myBtn">
-                                        <p onClick={decreaseChild}>-</p>
-                                        <p>{children}</p>
-                                        <p onClick={increaseChild}>+</p>
-                                    </div>
-                                </div>
-                                <div className="adult1">
-                                    <p>Room</p>
-                                    <div className="myBtn">
-                                        <p onClick={decreaseRoom}>-</p>
-                                        <p>{room}</p>
-                                        <p onClick={increaseRoom}>+</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr className="myLine" />
-                            <div className="parag">
-                                <div className="pet">
-                                    <p>Travelling with pets?</p>
-                                    <input type="checkbox" id="pet" className="checkbox" />
-                                </div>
-                                <div className="cont">
-                                    <p>Assistance animals aren’t considered pets.</p>
-                                    <a href="">Read more about travelling with assistance animals</a>
-                                </div>
-                            </div>
-                            <button className="DoneBtn" onClick={toggleCard}>Done</button>
-                        </div>
-                    )}
+import React, { useState, useCallback } from 'react';
+import { Calendar } from 'lucide-react';
+import debounce from 'lodash.debounce';
+import './Searchbar.css';
 
-                </div>
-            </div>
+const cities = [
+  'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai',
+  'Kolkata', 'Pune', 'Jaipur', 'Ahmedabad', 'Surat'
+];
+
+const Searchbar = () => {
+  const [location, setLocation] = useState('');
+  const [showLocations, setShowLocations] = useState(false);
+  const [filteredCities, setFilteredCities] = useState(cities);
+  const [selectedDates, setSelectedDates] = useState({
+    checkIn: null,
+    checkOut: null
+  });
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [showGuestsCard, setShowGuestsCard] = useState(false);
+  const [guests, setGuests] = useState({
+    adults: 2,
+    children: 0,
+    rooms: 1
+  });
+
+  // Debounced search function
+  const debouncedSearch = useCallback(
+    debounce((searchTerm) => {
+      const filtered = cities.filter(city =>
+        city.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setFilteredCities(filtered);
+    }, 300),
+    []
+  );
+
+  const handleLocationChange = (e) => {
+    const value = e.target.value;
+    setLocation(value);
+    setShowLocations(true);
+    debouncedSearch(value);
+  };
+
+  const handleLocationSelect = (city) => {
+    setLocation(city);
+    setShowLocations(false);
+  };
+
+  const handleDateSelect = (type) => {
+    setShowCalendar(true);
+    // Implement date selection logic
+  };
+
+  const updateGuests = (type, operation) => {
+    setGuests(prev => ({
+      ...prev,
+      [type]: operation === 'add' 
+        ? prev[type] + 1 
+        : Math.max(type === 'adults' ? 1 : 0, prev[type] - 1)
+    }));
+  };
+
+  return (
+    <div className="search-container">
+      {/* Location Input */}
+      <div className="search-input">
+        <input 
+          type="text" 
+          placeholder="Where are you going?" 
+          value={location}
+          onChange={handleLocationChange}
+          onFocus={() => setShowLocations(true)}
+        />
+        {showLocations && (
+          <div className="locations-dropdown">
+            {filteredCities.map((city) => (
+              <div 
+                key={city} 
+                className="location-item"
+                onClick={() => handleLocationSelect(city)}
+              >
+                {city}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Date Selection */}
+      <div className="date-input">
+        <div 
+          className="date-display" 
+          onClick={() => handleDateSelect('checkIn')}
+        >
+          <Calendar size={18} />
+          <span>{selectedDates.checkIn ? 'Check-in' : 'Add dates'}</span>
         </div>
-    );
-}
+        {showCalendar && (
+          <div className="calendar-dropdown">
+            {/* Calendar component will go here */}
+          </div>
+        )}
+      </div>
+
+      {/* Guests Selection */}
+      <div className="guests-input">
+        <div 
+          className="guests-display"
+          onClick={() => setShowGuestsCard(!showGuestsCard)}
+        >
+          {`${guests.adults} Adults · ${guests.children} Children · ${guests.rooms} Room`}
+        </div>
+        {showGuestsCard && (
+          <div className="guests-card">
+            <div className="guest-type">
+              <span>Adults</span>
+              <div className="guest-controls">
+                <button onClick={() => updateGuests('adults', 'subtract')}>-</button>
+                <span>{guests.adults}</span>
+                <button onClick={() => updateGuests('adults', 'add')}>+</button>
+              </div>
+            </div>
+            <div className="guest-type">
+              <span>Children</span>
+              <div className="guest-controls">
+                <button onClick={() => updateGuests('children', 'subtract')}>-</button>
+                <span>{guests.children}</span>
+                <button onClick={() => updateGuests('children', 'add')}>+</button>
+              </div>
+            </div>
+            <div className="guest-type">
+              <span>Rooms</span>
+              <div className="guest-controls">
+                <button onClick={() => updateGuests('rooms', 'subtract')}>-</button>
+                <span>{guests.rooms}</span>
+                <button onClick={() => updateGuests('rooms', 'add')}>+</button>
+              </div>
+            </div>
+            <button 
+              className="done-button"
+              onClick={() => setShowGuestsCard(false)}
+            >
+              Done
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Search Button */}
+      <button className="search-button">Search</button>
+    </div>
+  );
+};
 
 export default Searchbar;

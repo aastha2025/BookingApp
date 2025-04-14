@@ -1,7 +1,6 @@
 .offer {
     padding: 20px;
     background-color: white;
-    margin-top: 80px;
     text-align: start;
 }
 
@@ -97,7 +96,7 @@ h2{
 /* Slick Arrows */
 @media (max-width: 936px) {
     .offer { /* whatever is just below the search bar */
-      margin-top: 200px; /* or adjust as needed */
+      margin-top: 20px; /* or adjust as needed */
     }
   }
   
@@ -138,7 +137,7 @@ h2{
     }
   
     .offer {
-      margin-top: 250px; /* increase if your search bar overlaps */
+      margin-top: 20px; /* increase if your search bar overlaps */
       padding: 10px;
     }
   
