@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import style from './Flight.module.css';
 import gb from './global.module.css';
 import Brazil from './Brazil';
-import FlightSlick from './FlightSlick';
+import FlightSlick from '../CorouSlick/FlightSlick'
 
 const Flight = () => {
   const [activeCard, setActiveCard] = useState(null);

@@ -4,9 +4,10 @@ import "./Navbar.css";
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { setUsername, setPhoto, setEmail, clearData } from '../feature/user/userSlice';
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
-function Navbar() {
+const Navbar = React.memo(() => {
     const [menuOpen, setMenuOpen] = useState(false);
     const username = useSelector((state) => state.user.username);
     const photo = useSelector((state) => state.user.photo);
@@ -55,9 +56,9 @@ function Navbar() {
                     </div>
                 </div>
                 <div className={`lowernavbar ${menuOpen ? "open" : ""}`}>
-                    <a href='/' className="nav-a"><img src="/images/icons8-bed-50.png" alt="Stays" className='nav-img' /> Stays</a>
-                    <a href='/flight' className="nav-a"><img src="/images/icons8-plane-50.png" alt="flights" className='nav-img' /> Flights</a>
-                    <a href="/hotel" className="nav-a"><img src="/images/icons8-plane-50.png" alt="flights + hotels" className='nav-img' /> Flight + Hotel</a>
+                    <Link to='/' className="nav-a"><img src="/images/icons8-bed-50.png" alt="Stays" className='nav-img' /> Stays</Link>
+                    <Link to='/flight' className="nav-a"><img src="/images/icons8-plane-50.png" alt="flights" className='nav-img' /> Flights</Link>
+                    <Link to="/hotel" className="nav-a"><img src="/images/icons8-plane-50.png" alt="flights + hotels" className='nav-img' /> Flight + Hotel</Link>
                     <a className="nav-a"><img src="/images/icons8-car-30.png" alt="car rental" className='nav-img' /> Car rental</a>
                     <a className="nav-a"><img src="/images/icons8-business-network-50.png" alt="attraction" className='nav-img' /> Attractions</a>
                     <a className="nav-a"><img src="/images/icons8-airport-50.png" alt="airport taxi" className='nav-img' /> Airport taxis</a>
@@ -65,6 +66,6 @@ function Navbar() {
             </div>
         </nav>
     );
-}
+});
 
 export default Navbar;
