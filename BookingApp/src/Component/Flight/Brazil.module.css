@@ -1,0 +1,46 @@
+.cardContainer{
+    /* padding-top: 30px; */
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    border: 1px solid #ccc;
+    /* box-shadow: 0px 4px 10px #ccc; */
+    border-radius: 10px;
+}
+.cardContainer:hover {
+    box-shadow: 0px 4px 10px #ccc;
+}
+.BrazilImg {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.brazilContent {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.head {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(26,26,26);
+    line-height: 24px;
+}
+
+.subHeading {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(26,26,26);
+}
+
+.brazilP {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(26,26,26);
+}

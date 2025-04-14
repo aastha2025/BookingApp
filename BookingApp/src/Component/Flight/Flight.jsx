@@ -1,13 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import style from './Flight.module.css';
 import gb from './global.module.css';
+import Brazil from './Brazil';
+import FlightSlick from './FlightSlick';
 
 const Flight = () => {
   const [activeCard, setActiveCard] = useState(null);
   const cardRefs = useRef({});
   const containerRef = useRef(null);  // Ref for the entire component to detect outside clicks
 
- 
+
   useEffect(() => {
     const handleOutsideClick = (e) => {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
@@ -27,9 +29,9 @@ const Flight = () => {
 
     setActiveCard((prev) => {
       if (prev?.id === cardId) {
-        return null;  
+        return null;
       }
-      return { id: cardId, rect };  
+      return { id: cardId, rect };
     });
   };
 
@@ -137,7 +139,7 @@ const Flight = () => {
             width: cardRefs.current[activeCard.id]?.offsetWidth + 'px',
             left: `${activeCard.rect.left}px`,
             top: `${activeCard.rect.bottom + window.scrollY}px`,
-            zIndex: 9999, 
+            zIndex: 9999,
           }}
         >
           <h3>Card for Column {activeCard.id}</h3>
@@ -145,7 +147,25 @@ const Flight = () => {
         </div>
       )}
 
-      <div className={gb.container}></div>
+      <div className={gb.container}>
+        <div className={style.brazilContent}>
+          <h2>A spotlight on Brazil</h2>
+          <span className={style.pBrazil}>Soak up its bustling cities, cuisine and carnival. Whether you marvel at its first-class sunsets, or explore its rich rainforests, Brazil offers something vibrant, diverse and addictive. Check these top destinations you can fly to year round.</span>
+          <div className={style.BrazilCard}>
+            {/* head subHead para 
+
+            */}
+            <Brazil sr = "/images/beach.webp" head="Rio de Janerio " subHead="Beach, city, nightfall" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+
+            <Brazil sr = "/images/flood.webp" head="Salvador" subHead="Beach, culture, nature" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+
+            <Brazil sr = "/images/ancient.webp" head="Manaus" subHead="Nature, wildlife, adventure" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+          </div>
+        </div>
+
+
+        <FlightSlick />
+      </div>
     </div>
   );
 };
