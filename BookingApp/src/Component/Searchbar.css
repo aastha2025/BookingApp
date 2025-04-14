@@ -1,12 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 .searchbar {
     position: absolute;
     /* width: 74vw; */
     bottom: -100px;
 }
 
+
 .upper-searchbar {
     background-color: #FFB700;
-    padding: 5px 5px;
+    padding: 5px;
     border-radius: 10px;
     margin-right: 2px;
     margin-bottom: 2px;
@@ -16,32 +21,9 @@
     justify-content: space-between;
 }
 
-.sec1{
+.sec1, .sec2, .sec3 {
     display: flex;
-    padding: 5px 5px;
-    align-items: center;
-    background-color: white;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.sec2
-    {
-        display: flex;
-        padding-left: 5px;
-        padding-right: 5px;
-        /* padding-left: 7px; */
-        align-items: center;
-        background-color: white;
-        border-radius: 5px;
-        width: 100%;
-      
-    }
-    
-
-.sec3 {
-    display: flex;
-    padding: 5px 5px;
+    padding: 5px;
     align-items: center;
     background-color: white;
     border-radius: 5px;
@@ -60,28 +42,19 @@
     justify-content: space-between;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type="date"], input[type="text"] {
     cursor: pointer;
-}
-    
-input[type="date"] {
-    cursor: pointer;
-}
-input[type="text"] {
     width: 100%;
     outline: none;
     font-size: 14px;
     font-weight: 500;
     color: rgb(26, 26, 26);
-    padding: 5px 5px;
+    padding: 5px;
     border: none;
-    /* padding: 5px 5px; */
-    box-sizing: border-box; /* Ensures padding and borders are included in the width */
 }
 
-
-.sec1, .sec2, .sec3:hover {
-    border-color: orange;
+.sec1:hover, .sec2:hover, .sec3:hover {
+    border: 1px solid orange;
 }
 
 .stay {
@@ -97,16 +70,17 @@ input[type="text"] {
     height: 24px;
     margin-right: 10px;
 }
+
 .sec-1 {
     padding: 12px 25px;
     background-color: #006CE4;
-    font-size: bold;
     color: white;
     border-radius: 5px;
-    border: #006CE4;
-    font-weight: 400;
+    border: none;
+    font-weight: 500;
     font-size: 15px;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .sec-1:hover {
@@ -142,7 +116,6 @@ input[type="text"] {
     z-index: 9999;
     box-shadow: 4px 4px 10px #ccc;
     border-radius: 10px;
-    padding: 20px; /* Add padding inside the card */
 }
 
 .data {
@@ -156,14 +129,12 @@ input[type="text"] {
     justify-content: space-between;
     align-items: center;
 }
-.adult1 p {
-    color: rgb(26, 26, 26);
+.adult1 p,
+.myBtn p,
+.parag .pet p {
     font-size: 14px;
     font-weight: 500;
-}
-
-.myBtn p{
-    font-size: 14px;
+    margin: 10px;
 }
 
 .myBtn {
@@ -180,17 +151,11 @@ input[type="text"] {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
 .myBtn:hover {
     border-color: #ffb700;
     transform: scale(1.05);
 }
 
-.myBtn p {
-    margin: 0;
-    text-align: center;
-    width: 30px;
-}
 
 .parag {
     display: flex;
@@ -203,20 +168,13 @@ input[type="text"] {
     justify-content: space-between;
 }
 
-
-.parag .pet p {
-    color: black;
-    font-size: 14px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 400;
-}
 .parag .cont p {
     font-size: 12px;
     color: black;
     margin-bottom: 0px;
 }
 .myLine {
-    margin: 5px;
+    margin: 5px 0;
 }
 .parag .cont a{
     font-size: 12px;
@@ -246,6 +204,7 @@ input[type="text"] {
     border: 1px solid rgb(0, 108, 228);
     padding: 10px;
     border-radius: 5px;
+    transition:  all 0.3 ease;
 }
 
 .DoneBtn:hover {
@@ -279,65 +238,29 @@ input[type="text"] {
         width: 72vw;
     }
 }
-@media(max-width: 800px) {
-    .searchbar{
-        width: 72vw;
-    }
-}
-@media(max-width: 890px) {
-    .searchbar{
-        width: 78vw;
-    }
-}
-@media(max-width: 810px) {
-    .searchbar{
+@media(max-width: 936px) {
+    .searchbar {
         width: 85vw;
+        bottom: -180px;
     }
-}
-@media(max-width: 780px) {
-    .searchbar{
-        width: 72vw;
-    }
-}
 
-@media(max-width: 637px) {
-    .searchbar{
-        width: 80vw;
-    }
-}
-@media(max-width: 580px) {
-    .searchbar{
-        width: 91vw;
-    }
-}
-
-
-
-
-@media (max-width: 936px) {
     .upper-searchbar {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
         gap: 10px;
         padding: 10px;
     }
 
-    .searchbar {
-        bottom: -200px;
-    }
-    .sec1, .sec2, .sec3 {
+    .sec1, .sec2, .sec3, .sec-1 {
         width: 100%;
     }
 
     .sec-1 {
-        width: 100%;
         padding: 12px 0;
         font-size: 16px;
     }
 
     .stay {
-        /* justify-content: space-between; */
         gap: 10px;
     }
 
@@ -345,20 +268,23 @@ input[type="text"] {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .cardy {
+        width: 90vw;
+        left: 0;
+        top: 100%;
+        margin-top: 5px;
+    }
+
+    .sec3 {
+        position: relative;
+    }
 }
 
-@media (max-width: 936px) {
-    .cardy {
-      position: absolute;
-      width: 90vw;
-      left: 0;
-      top: 100%;
-      margin-top: 5px;
-      box-shadow: 4px 4px 10px #ccc;
-      z-index: 999;
+@media(max-width: 780px) {
+    .searchbar{
+        width: 90vw;
     }
-  
-    .sec3 {
-      position: relative; /* Ensure .cardy is positioned relative to this */
-    }
-  }
+}
+
+
