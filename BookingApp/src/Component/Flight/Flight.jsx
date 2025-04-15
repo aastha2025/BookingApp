@@ -8,6 +8,59 @@ const Flight = () => {
   const [activeCard, setActiveCard] = useState(null);
   const cardRefs = useRef({});
   const containerRef = useRef(null);  // Ref for the entire component to detect outside clicks
+  const [flightButton, setflightButton] = useState('inter');
+    const test_trips = [
+      {
+        id: 1,
+        image: "/images/is1.webp",
+        title: "New Delhi to Kathmandu",
+        desc: null
+      },
+      {
+        id: 2,
+        image: "/images/is2.webp",
+        title: "New Delhi to Dubai",
+        desc: null
+      },
+      {
+        id: 3,
+        image: "/images/is3.webp",
+        title: "New Delhi to Bangkok",
+        desc: null
+      }, {
+        id: 4,
+        image: "/images/is4.webp",
+        title: "New Delhi to Singapore",
+        desc: null
+      }
+    ];
+
+
+    const Trending_city = [
+      {
+        id: 1,
+        image: "/images/is1.webp",
+        title: "Dubai, United Arab Emirates",
+        desc: "Flights from Delhi International Airport 19 Apr - 26 Apr · Round trip"
+      },
+      {
+        id: 2,
+        image: "/images/is2.webp",
+        title: "London, United Kingdom",
+        desc: "Flights from Delhi International Airport 19 Apr - 26 Apr · Round trip"
+      },
+      {
+        id: 3,
+        image: "/images/is3.webp",
+        title: "Toronto, Canada",
+        desc: "Flights from Delhi International Airport 19 Apr - 26 Apr · Round trip"
+      }, {
+        id: 4,
+        image: "/images/is4.webp",
+        title: "Dabolim, India",
+        desc: "Flights from Delhi International Airport 19 Apr - 26 Apr · Round trip"
+      }
+    ];
 
 
   useEffect(() => {
@@ -155,16 +208,36 @@ const Flight = () => {
             {/* head subHead para 
 
             */}
-            <Brazil sr = "/images/beach.webp" head="Rio de Janerio " subHead="Beach, city, nightfall" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+            <Brazil sr="/images/beach.webp" head="Rio de Janerio " subHead="Beach, city, nightfall" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
 
-            <Brazil sr = "/images/flood.webp" head="Salvador" subHead="Beach, culture, nature" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+            <Brazil sr="/images/flood.webp" head="Salvador" subHead="Beach, culture, nature" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
 
-            <Brazil sr = "/images/ancient.webp" head="Manaus" subHead="Nature, wildlife, adventure" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+            <Brazil sr="/images/ancient.webp" head="Manaus" subHead="Nature, wildlife, adventure" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
           </div>
+          <h2 className={style.flight}>Popular Flights near you</h2>
+          <p className={style.flightSub}>Find deals on domestic and international flights</p>
+          <div className={style.flightNavy}>
+            <button 
+              className={`${style.flightNavbarButton} ${flightButton === 'inter'? style.selected :''}`}
+              onClick={() => {setflightButton('inter')}}
+            >
+              International
+            </button>
+            <button 
+              className={`${style.flightNavbarButton} ${flightButton === 'domes'? style.selected :''}`} 
+              onClick={() => {setflightButton('domes')}}
+            >
+              Domestic
+            </button>
+          </div>
+          {/* <hr /> */}
+          {flightButton === 'inter' ?<FlightSlick data={test_trips} /> : <FlightSlick data={Trending_city} />}
+          
+
+          <h2 className={style.flight}>Trending cities</h2>
+          <p className={style.flightSub}>Book flights to a destination popular with travellers from India</p>
+          <FlightSlick data={Trending_city} />
         </div>
-
-
-        <FlightSlick />
       </div>
     </div>
   );
