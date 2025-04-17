@@ -1,0 +1,39 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-top: 16px;
+  }
+  
+  .gridItem {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+
+  .gridItem:hover {
+    transform: scale(1.01);
+  }
+
+  .image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* border-radius: 50%; */
+  }
+  
+  .txy {
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 12px;
+  }
+  

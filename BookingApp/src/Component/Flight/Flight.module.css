@@ -1,253 +1,240 @@
-.searchBlock {
-    width: 100vw;
-    height: 300px;
-    background-color: #F5F5F5;
-}
+/* Flight.module.css */
 
-.head {
-    font-family: "Blue Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: rgb(26,26,26);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 40px;
-    padding-top: 30px;
+.searchBlock {
+  background-color: #fff;
+  padding: 30px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    /* */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.head {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  /* text-align: center; */
+}
+
+.searchBarCon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.FormChoose {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .para {
-    margin-bottom: 0px;
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    color: rgb(26,26,26);
-    font-size: 16px;
-    line-height: 24px;
+  font-size: 16px;
+  color: #666;
+  /* text-align: center; */
 }
 
 .ActionChoose {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    overflow-x: auto;
-    white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  /* justify-content: center; */
+  align-items: center;
 }
-
 
 .label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    font-size: 10px;
-    white-space: nowrap;
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    color: rgb(26,26,26);
-    font-size: 14px;
-    line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #444;
+  cursor: pointer;
 }
 
-input[type = "radio"] {
-    margin-top: 2px;
-    margin-bottom: 0px;
+.label input[type="radio"],
+.label input[type="checkbox"] {
+  accent-color: #2563eb;
+  cursor: pointer;
 }
 
 .dropdown {
-    margin-top: 20px;
-    border: none;
-    background-color: #F5F5F5;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
 }
-.searchInput{
-    padding-top: 20px;
+
+.searchInput {
+  background-color: #FFB700;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .gridContainer {
-    display: grid;
-    grid-template-columns: 4fr 0.5fr 4fr 3fr 3fr 1.5fr;
-    background-color: #fff;
-    border: 3px solid #FFB700;
-    /* padding: 10px; */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 2fr 0.5fr 2fr 1.5fr 1.5fr 1fr;
+  gap: 10px;
+}
+
+.gridContainer > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* padding: 12px 15px; */
+  padding-left: 5px;
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.col6 {
+  padding: 0px !important;
+  background-color: #FFB700 !important;
+  border: none !important;
+}
+
+.gridContainer > div:hover {
+  border-color: #2563eb;
+}
+
+.colPara {
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col2 button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #64748b;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.col6 button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.col6 button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Card Styles */
+.card {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .gridContainer {
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: auto auto;
   }
-  
-  .col1,.col2,.col3,.col4,.col5,.col6 {
-    background-color: white;
-    color: rgb(89,89,89);
-    line-height: 20px;
-    text-align: center;
-    padding: 10px;
+
+  .col4, .col5, .col6 {
+    grid-column: span 1;
+  }
+
+  .col6 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .head {
+    font-size: 24px;
+  }
+
+  .ActionChoose {
+    gap: 10px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .col2 {
+    display: none;
+  }
+
+  .card {
+    width: 90% !important;
+    left: 5% !important;
+    right: 5% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .head {
+    font-size: 20px;
+  }
+
+  .para {
     font-size: 14px;
-    font-weight: 400;
-    border-radius: 5px;
-    border: 4px solid #FFB700ed;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   }
 
-  .col1, .col3, .col4, .col5 {
-    display: flex;
-    align-items: center;
+  .ActionChoose {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .col2 > button {
-    color: #0057B8;
-    border: none;
-    background-color: white;
-    font-size: 14px;
-    font-weight: bolder;
-  }
-  .col6 { 
-    background-color: #0057B8;
-  }
-
-  .col6 > button {
-    border: none;
-    background-color: #0057B8;
-    text-align: center;
-    padding-top: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgb(255,255,255);
-    line-height: 20px;
-  }
-
-  .col6 > button:hover, .col2 > button:hover {
-    cursor: pointer;
+  .gridContainer > div {
+    padding: 10px 12px;
   }
 
   .colPara {
-    padding-left: 10px;
+    font-size: 13px;
   }
-  .col:nth-child(odd) {
-    background-color: #6c757d;
-  }
-
-  
-  .card {
-    position: absolute;
-    background-color: white;
-    border: 2px solid #0057B8;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-  }
-  
-  .card h3 {
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    margin: 0;
-  }
-  
-
-  /* Add these styles at the end of your existing CSS */
-
-/* Adjusting grid layout for smaller screens */
-@media (max-width: 1200px) {
-    .gridContainer {
-      grid-template-columns: 3fr 0.5fr 3fr 3fr 3fr 1.5fr;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .gridContainer {
-      grid-template-columns: 2fr 0.5fr 2fr 2fr 2fr 1fr;
-    }
-  
-    .col1, .col3, .col4, .col5 {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .col1, .col3, .col5 {
-      padding: 8px;
-    }
-  
-    .col2 > button {
-      padding: 8px;
-    }
-  
-    .col6 > button {
-      padding: 12px;
-    }
-  
-    .head {
-      font-size: 24px;
-      padding-top: 20px;
-    }
-  
-    .para {
-      font-size: 14px;
-    }
-  
-    .label {
-      font-size: 12px;
-    }
-  }
-  
-  /* Further adjustments for very small screens (e.g., mobile phones) */
-  @media (max-width: 600px) {
-    .gridContainer {
-      grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 1fr;
-    }
-  
-    .col1, .col3, .col4, .col5 {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .col1, .col3, .col5 {
-      padding: 6px;
-    }
-  
-    .col2, .col6 {
-      display: none; /* Hide the button section for mobile */
-    }
-  
-    .col6 > button {
-      padding: 10px;
-      font-size: 14px;
-    }
-  
-    .card {
-      width: 100%;
-      left: 0;
-      top: 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  
-    .searchBlock {
-      height: auto;
-      padding: 10px;
-    }
-  
-    .ActionChoose {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      padding-top: 10px;
-    }
-  
-    .label {
-      font-size: 14px;
-    }
-  
-    .dropdown {
-      margin-top: 10px;
-    }
-  }
-
+}
   .brazilContent {
     padding: 30px;
   }
@@ -271,3 +258,140 @@ input[type = "radio"] {
     display: flex;
     gap: 20px;
   }
+
+.flight {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: rgb(26,26,26);
+  padding-top: 50px;
+}
+
+.flightSub {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgb(89,89,89);
+}
+
+.flightNavy {
+  display: flex;
+  gap: 5px;
+  border: thin solid #ccc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.flightNavbarButton {
+  margin: 15px;
+  margin-bottom: 0;
+  padding: 15px;
+  border: none;
+  background-color: white;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(26,26,26);
+  font-weight: 400;
+}
+.flightNavbarButton:hover {
+  background-color: #efebeb;
+}
+
+.selected {
+  color: #006CE4;
+  border-bottom: 2px solid #006CE4;
+  /* border-bottom: none; */
+}
+
+
+.AccounTravel {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* .TravelLeft {
+  width: 50%;
+  background-color: cadetblue;
+} */
+.TravelLeft h5 {
+  /* white-space: nowrap; */
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(26,26,26);
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.flightAccountP {
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(26,26,26);
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 8px;
+}
+
+.flightAccountButton {
+  display: flex;
+  gap: 10px;
+}
+
+.flightAccountButton > button {
+  padding: 7px 15px 7px 15px;
+  border: none;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.flightAccountButton > .l {
+  background-color: #006CE4;
+  color: white;
+  border-radius: 5px;
+}
+
+.flightAccountButton .r {
+  background-color: transparent;
+  color: #006CE4;
+}
+
+
+.TopFlight {
+  padding-top: 50px;
+}
+
+.TopFlight > h2 {
+  margin-bottom: 0px;
+  padding-bottom: 8px;
+}
+
+.TravelNav {
+  display: flex;
+  padding-top: 10px;
+  gap: 15px;
+}
+
+.TravelNav > button {
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.TravelNav > .btnSelect {
+  background-color: #f1f4f8;
+  border: 1px solid #006CE4;
+  color: #006CE4;
+}

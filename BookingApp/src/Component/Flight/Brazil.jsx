@@ -1,9 +1,10 @@
 import React from 'react'
 import style from './Brazil.module.css'
+
 const Brazil = (props) => {
     return (
         <div className={style.cardContainer}>
-            <img className={style.BrazilImg} src={props.sr} alt="" width={"350px"} height={"200px"} />
+            <img className={style.BrazilImg} src={props.sr} alt="" />
             <div className={style.brazilContent}>
                 <span className={style.head}>{props.head}</span>
                 <span className={style.subHeading}>{props.subHead}</span>

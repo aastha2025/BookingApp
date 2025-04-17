@@ -3,11 +3,16 @@ import style from './Flight.module.css';
 import gb from './global.module.css';
 import Brazil from './Brazil';
 import FlightSlick from '../CorouSlick/FlightSlick'
+import TopFlightGrid from '../CorouSlick/TopFlightGrid';
+import { test_trips, Trending_city, Poluar_Routes, Cities, Regions, Countries, Airports } from './data';
 
 const Flight = () => {
   const [activeCard, setActiveCard] = useState(null);
   const cardRefs = useRef({});
   const containerRef = useRef(null);  // Ref for the entire component to detect outside clicks
+  const [flightButton, setflightButton] = useState('inter');
+  const [TravelBtn, setTravelBtn] = useState('plr')
+
 
 
   useEffect(() => {
@@ -46,15 +51,15 @@ const Flight = () => {
               <p className={style.para}>Discover your next dream destination</p>
               <form className={style.ActionChoose}>
                 <label className={style.label}>
-                  <input type="radio" name="trip" value="trip" />
+                  <input type="radio" name="travelType" value="roundTrip" />
                   Round trip
                 </label>
                 <label className={style.label}>
-                  <input type="radio" name="way" value="way" />
+                  <input type="radio" name="travelType" value="oneWay" />
                   One way
                 </label>
                 <label className={style.label}>
-                  <input type="radio" name="city" value="city" />
+                  <input type="radio" name="travelType" value="multiCity" />
                   Multi-city
                 </label>
                 <select className={style.dropdown}>
@@ -155,16 +160,94 @@ const Flight = () => {
             {/* head subHead para 
 
             */}
-            <Brazil sr = "/images/beach.webp" head="Rio de Janerio " subHead="Beach, city, nightfall" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+            <Brazil sr="/images/beach.webp" head="Rio de Janerio " subHead="Beach, city, nightfall" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
 
-            <Brazil sr = "/images/flood.webp" head="Salvador" subHead="Beach, culture, nature" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+            <Brazil sr="/images/flood.webp" head="Salvador" subHead="Beach, culture, nature" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
 
-            <Brazil sr = "/images/ancient.webp" head="Manaus" subHead="Nature, wildlife, adventure" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+            <Brazil sr="/images/ancient.webp" head="Manaus" subHead="Nature, wildlife, adventure" para="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ab molestiae deleniti fugit rem vel." />
+          </div>
+          <h2 className={style.flight}>Popular Flights near you</h2>
+          <p className={style.flightSub}>Find deals on domestic and international flights</p>
+          <div className={style.flightNavy}>
+            <button
+              className={`${style.flightNavbarButton} ${flightButton === 'inter' ? style.selected : ''}`}
+              onClick={() => { setflightButton('inter') }}
+            >
+              International
+            </button>
+            <button
+              className={`${style.flightNavbarButton} ${flightButton === 'domes' ? style.selected : ''}`}
+              onClick={() => { setflightButton('domes') }}
+            >
+              Domestic
+            </button>
+          </div>
+          {/* <hr /> */}
+          {flightButton === 'inter' ? <FlightSlick data={test_trips} /> : <FlightSlick data={Trending_city} />}
+
+
+          <h2 className={style.flight}>Trending cities</h2>
+          <p className={style.flightSub}>Book flights to a destination popular with travellers from India</p>
+          <FlightSlick data={Trending_city} />
+
+          <h2 className={style.flight}>Your account, your travel</h2>
+          <div className={style.AccounTravel}>
+            <div className={style.TravelLeft}>
+              <h5>All your trip details in one place</h5>
+              <p className={style.flightAccountP}>Sign in to book faster and manage your trip with ease</p>
+              <div className={style.flightAccountButton}>
+                <button className={style.l} >Sign in</button>
+                <button className={style.r} >Register</button>
+              </div>
+            </div>
+            <div className={style.TravelRight}>
+              <img src="/images/Genius.png" alt="I'm here" width={"90px"} height={"110px"} />
+            </div>
+          </div>
+          <div className={style.TopFlight}>
+            <h2 className={style}>Top flights from India</h2>
+            <p className={style.flightSub}>Explore destinations you can reach from India and start making new plans</p>
+            <div className={style.TravelNav}>
+              <button 
+                className={`${TravelBtn === 'plr' ? style.btnSelect : ''}`}
+                onClick={() => setTravelBtn('plr')}  
+              >
+                Popular routes
+              </button>
+              <button 
+                className={`${TravelBtn === 'ct' ? style.btnSelect : ''}`}
+                onClick={() => setTravelBtn('ct')}  
+              >
+                Cities
+              </button>
+              <button 
+                className={`${TravelBtn === 'cn' ? style.btnSelect : ''}`}
+                onClick={() => setTravelBtn('cn')}  
+              >
+                Countries
+              </button>
+              <button 
+                className={`${TravelBtn === 'reg' ? style.btnSelect : ''}`}
+                onClick={() => setTravelBtn('reg')}  
+              >
+                Regions
+              </button>
+              <button 
+                className={`${TravelBtn === 'air' ? style.btnSelect : ''}`}
+                onClick={() => setTravelBtn('air')}  
+              >
+                Airports
+              </button>
+            </div>
+            {/* Awesome grid will come here+ */}
+            {TravelBtn == 'plr'?<TopFlightGrid items={Poluar_Routes}/>:''}
+            {TravelBtn == 'ct'?<TopFlightGrid items={Cities}/>:''}
+            {TravelBtn == 'cn'?<TopFlightGrid items={Countries}/>:''}
+            {TravelBtn == 'reg'?<TopFlightGrid items={Regions}/>:''}
+            {TravelBtn == 'air'?<TopFlightGrid items={Airports}/>:''}
+            
           </div>
         </div>
-
-
-        <FlightSlick />
       </div>
     </div>
   );
