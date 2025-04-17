@@ -28,8 +28,8 @@ function App() {
       <Homelove />
       <Unique_prop />
       <Inspire_trip />
-      <Footer />
-      <Footer1 />
+      {/* <Footer />
+      <Footer1 /> */}
 
     </div>
   );
