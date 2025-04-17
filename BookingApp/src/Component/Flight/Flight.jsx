@@ -240,11 +240,11 @@ const Flight = () => {
               </button>
             </div>
             {/* Awesome grid will come here+ */}
-            {TravelBtn == 'plr'?<TopFlightGrid items={Poluar_Routes}/>:''}
-            {TravelBtn == 'ct'?<TopFlightGrid items={Cities}/>:''}
-            {TravelBtn == 'cn'?<TopFlightGrid items={Countries}/>:''}
-            {TravelBtn == 'reg'?<TopFlightGrid items={Regions}/>:''}
-            {TravelBtn == 'air'?<TopFlightGrid items={Airports}/>:''}
+            {TravelBtn == 'plr'?<TopFlightGrid item={Poluar_Routes}/>:''}
+            {TravelBtn == 'ct'?<TopFlightGrid item={Cities}/>:''}
+            {TravelBtn == 'cn'?<TopFlightGrid item={Countries}/>:''}
+            {TravelBtn == 'reg'?<TopFlightGrid item={Regions}/>:''}
+            {TravelBtn == 'air'?<TopFlightGrid item={Airports}/>:''}
             
           </div>
         </div>
