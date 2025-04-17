@@ -3,6 +3,7 @@ import hotel from './Hotel.module.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import gb from '../Flight/global.module.css';
 
 const Hotel = () => {
   const hotelList = [
@@ -75,7 +76,7 @@ const Hotel = () => {
   const [endDate, setEndDate] = useState("");
   const [travellers, setTravellers] = useState(2);
   const [room, setroom] = useState(1);
-  const [classes, setClasses] = useState("Any Class");
+  const [classes, setClasses] = useState("");
   const [child, setChild] = useState(0);
   const [show, setShow] = useState(false);
 
@@ -86,10 +87,17 @@ const Hotel = () => {
   }, [startDate, endDate]);
 
 
-  const toggleCard = () => {
-    setShow((prev) => !prev); // Toggle card visibility
+  const toggleCard = (e) => {
+    // Check if click is inside the cardy element
+    if (e && e.target.closest(`.${hotel.cardy}`)) {
+      return; // Don't close if clicking inside the dropdown
+    }
+    setShow(!show);
   };
 
+  const handleDone = () => {
+    setShow(false);
+  };
 
   const handleSearch = () => {
     if (!destination || !departure || !startDate || !endDate) {
@@ -132,7 +140,8 @@ const Hotel = () => {
     return;
   }
   return (
-    <div className={hotel.container}>
+    <div className={hotel.page}>
+         < div className={gb.container}>
       <div className={hotel.searchbar}>
             {/* <div className={hotel.city}> */}
               <div className={hotel.city1}>
@@ -165,78 +174,80 @@ const Hotel = () => {
                 <p className={hotel.dep}>When?</p>
               </div>
               <div className={hotel.lower}>
-                <div className={hotel.date}>
                   <input type="date"
                     value={startDate}
-                    onChange={(e) => setStartDate(e.target.value)} />
-                </div>
+                    onChange={(e) => setStartDate(e.target.value)}
+                    className={hotel.dateInput} />
                 <span>--</span>
                 <input type="date"
                   value={endDate}
-                  onChange={(e) => setEndDate(e.target.value)} />
+                  onChange={(e) => setEndDate(e.target.value)} 
+                  className={hotel.dateInput}/>
 
               </div>
             </div>
-            <div className={hotel.stay} onClick={toggleCard}>
-              <div className={hotel.upper}>
-                <p className={hotel.dep}>Travellers and flight class</p>
-              </div>
-              <div className={hotel.lower}>
-                <div className={hotel.bookingcard}>
-                  <div className={hotel.people}>{travellers + child} Travellers</div>
-                  <div className={hotel.people}>{room}Room</div>
-                  <div className={hotel.people}>{classes}Class</div>
-                </div>
-              </div>
-              </div>
-              <button className={hotel.search} onClick={handleSearch}>Search</button>
+             
+  <div className={hotel.stay} onClick={toggleCard}>
+    <div className={hotel.upper}>
+      <p className={hotel.dep}>Travellers and flight class</p>
+    </div>
+    <div className={hotel.lower}>
+      <div className={hotel.bookingcard}>
+        <div className={hotel.people}>{travellers + child} Travellers</div>
+        <div className={hotel.people}>{room} Room</div>
+        <div className={hotel.people}>{classes} Class</div>
+      </div>
+    </div>
+    
+    {/* Dropdown card */}
+    {show && (
+      <div className={hotel.cardy}>
+        <div className={hotel.data}>
+          <div className={hotel.traveller}>
+            <p>Adults</p>
+            <p className={hotel.p1}>12+</p>
+            <div className={hotel.myBtn}>
+              <p onClick={decreaseTraveller}>-</p>
+              <p>{travellers}</p>
+              <p onClick={increaseTraveller}>+</p>
+            </div>
+          </div>
+          <div className={hotel.traveller}>
+            <p>Children</p>
+            <p className={hotel.p1}>{child}</p>
+            <div className={hotel.myBtn}>
+              <p onClick={decreaseChild}>-</p>
+              <p>{child}</p>
+              <p onClick={increaseChild}>+</p>
+            </div>
+          </div>
+          <div className={hotel.traveller}>
+            <p>Rooms</p>
+            <div className={hotel.myBtn}>
+              <p onClick={decreaseRoom}>-</p>
+              <p>{room}</p>
+              <p onClick={increaseRoom}>+</p>
+            </div>
+          </div>
+        </div>
+        <div className={hotel.flightClass}>
+          <span className={hotel.flight}>Flight Class: </span>
+          <button className={hotel.flightbtn} onClick={() => setClasses("Any Class")}>Any Class</button>
+          <button className={hotel.flightbtn} onClick={() => setClasses("Economy")}>Economy</button>
+          <button className={hotel.flightbtn} onClick={() => setClasses("Premium economy")}>Premium economy</button>
+          <button className={hotel.flightbtn} onClick={() => setClasses("Business")}>Business</button>
+          <button className={hotel.flightbtn} onClick={() => setClasses("First class")}>First class</button>
+        </div>
+        <button className={hotel.donebtn} onClick={handleDone}>Done</button>
+      </div>
+    )}
+  </div>
+  
+  <button className={hotel.search} onClick={handleSearch}>Search</button>
 </div>
-              {show && (
-                <div className={hotel.cardy}>
-                  <div className={hotel.data}>
-                    <div className={hotel.traveller}>
-                      <p>Traveller</p>
-                      <p className={hotel.p1}>12+</p>
-                      <div className={hotel.myBtn}>
-                        <p onClick={decreaseTraveller}>-</p>
-                        <p>{travellers}</p>
-                        <p onClick={increaseTraveller}>+</p>
-                      </div>
-
-                    </div>
-                    <div className={hotel.traveller}>
-                    <p>Child</p>
-                      <p className={hotel.p1}>{child}</p>
-                        <div className={hotel.myBtn}>
-                          <p onClick={decreaseChild}>-</p>
-                          <p>{child}</p>
-                          <p onClick={increaseChild}>+</p>
-
-                        </div>
-                        </div>
-                    <div className={hotel.traveller}>
-                      <p>Room</p>
-                      <div className={hotel.myBtn}>
-                        <p onClick={decreaseRoom}>-</p>
-                        <p>{room}</p>
-                        <p onClick={increaseRoom}>+</p>
-                      </div>
-                    </div>
-                    </div>
-                    <div className={hotel.flightClass}>
-                      <span className={hotel.flight}>Flight Class : </span>
-                      <button className={hotel.flightbtn} onClick={() => setClasses("Any Class")}>Any Class</button>
-                      <button className={hotel.flightbtn} onClick={() => setClasses("Economy")}>Economy</button>
-                      <button className={hotel.flightbtn} onClick={() => setClasses("Premium economy")}>Premium economy</button>
-                      <button className={hotel.flightbtn} onClick={() => setClasses("Business")}>Business</button>
-                      <button className={hotel.flightbtn} onClick={() => setClasses("First class")}>First class</button>
-                    </div>
-                  <button  className={hotel.donebtn} onClick={toggleCard}>Done</button>
-                </div>
-              )}
-
-
+</div>
       <div className={hotel.desti}>
+        <div className={gb.container}>
         <h5>Discover our hottest destinations</h5>
         <Slider {...Settings} className={hotel.carouselC}>
           {hotelList.map((place) => (
@@ -250,8 +261,9 @@ const Hotel = () => {
           ))}
         </Slider>
       </div>
-
+</div>
       <div className={hotel.foo}>
+        <div className={gb.container}>
         <div className={hotel.upperfoo}>
           <div className={hotel.foosec1}>
             <a href="#">General conditions</a>
@@ -273,7 +285,8 @@ const Hotel = () => {
           <p>This website is property of BravoNext, S.A., headquartered in Vicolo de’ Calvi 2, 6830, Chiasso, CH (Company/VAT num. CHE-115.704.228), a company belonging to lastminute.com group. © 2025  - All rights reserved. “lastminute.com”, “lastminute”, “LM”, “Top Secret Hotels” and “Top Secret” are all registered trademarks owned by a company of lastminute.com group.</p>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
 
   )
 }
