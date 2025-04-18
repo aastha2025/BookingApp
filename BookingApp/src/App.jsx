@@ -6,12 +6,14 @@ import MyHome from './Component/MyHome'
 import Footer from './Component/Footer'
 import Footer1 from './Component/Footer1'
 
+
 // Lazy-loaded pages
 const Flight = lazy(() => import('./Component/Flight/Flight'))
 const Auth = lazy(() => import('./Entry/Auth'))
 const Otp = lazy(() => import('./Entry/Otp'))
 const Hotel = lazy(() => import('./Component/Hotels/Hotel'))
 const NotFound = lazy(() => import('./Component/Errory/NotFound'))
+const Car = lazy(() => import('./Component/Car/Car'))
 
 function App() {
   return (
@@ -39,13 +41,14 @@ function AppLayout() {
           <Route path='/otp' element={<Otp />} />
           <Route path='/hotel' element={<Hotel />} />
           <Route path='*' element={<NotFound />} />
+          <Route  path= "/car"  element={<Car/>}/>
         </Routes>
       </Suspense>
 
       {/* Conditionally render footers */}
       {!hideFooter && (
         <>
-          <Footer />
+          {/* <Footer /> */}
           <Footer1 />
         </>
       )}

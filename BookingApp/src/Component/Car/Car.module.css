@@ -1,0 +1,132 @@
+.sec {
+    background-color: #003B95;
+}
+
+.h {
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: 50px;
+    color: white;
+    font-weight: 100%;
+    display: flex;
+    text-align: start;
+
+}
+
+.p {
+    color: white;
+    font-weight: 100%;
+    font-size: 24px;
+    padding-bottom: 40px;
+    display: flex;
+    text-align: start;
+
+}
+
+.travel {
+    font-size: 24px;
+    font-weight: 100%;
+    line-height: 32px;
+    color: rgb(26, 26, 26);
+    padding-top: 50px;
+    display: flex;
+    text-align: start;
+}
+
+.cardsec {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.savemoney {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgb(26, 26, 26);
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.save {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(26, 26, 26);
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.travelbtn {
+    display: flex;
+    gap: 10px;
+}
+
+.travelbtn > button {
+    padding: 7px 15px 7px 15px;
+    border: none;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.travelbtn > .signin {
+    background-color: #006CE4;
+    color: white;
+    border-radius: 5px;
+}
+
+.travelbtn > .register {
+    background-color: transparent;
+    color: #006CE4;
+}
+
+.head {
+    margin-top: 0px;
+    padding-top: 40px;
+    font-size: 24px;
+    color: black;
+    font-weight: 100%;
+    display: flex;
+}
+
+.par {
+    color: #7d7878;
+    font-weight: 100%;
+    font-size: 16px;
+    /* padding-top: 6px; */
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.carbtn{
+    display: flex;
+    margin-top: 8px;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.carbtn > button{
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.carbtn > .carrentalbtn{
+    background-color: #f1f4f8;
+    border: 1px solid #006CE4;
+    color: #006CE4;
+}
+
