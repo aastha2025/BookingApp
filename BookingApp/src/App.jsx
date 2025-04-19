@@ -3,8 +3,9 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './Component/Navbar'
 import './App.css'
 import MyHome from './Component/MyHome'
-import Footer from './Component/Footer'
 import Footer1 from './Component/Footer1'
+import './Component/Flight/global.module.css';
+
 
 
 // Lazy-loaded pages
@@ -14,6 +15,8 @@ const Otp = lazy(() => import('./Entry/Otp'))
 const Hotel = lazy(() => import('./Component/Hotels/Hotel'))
 const NotFound = lazy(() => import('./Component/Errory/NotFound'))
 const Car = lazy(() => import('./Component/Car/Car'))
+const Attraction  = lazy(() => import('./Component/Attraction/Attraction'));
+
 
 function App() {
   return (
@@ -42,6 +45,7 @@ function AppLayout() {
           <Route path='/hotel' element={<Hotel />} />
           <Route path='*' element={<NotFound />} />
           <Route  path= "/car"  element={<Car/>}/>
+          <Route  path= "/Attractions"  element={<Attraction />}/>
         </Routes>
       </Suspense>
 
