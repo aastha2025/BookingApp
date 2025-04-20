@@ -80,11 +80,11 @@ const Hotel = () => {
   const [child, setChild] = useState(0);
   const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    if (startDate && endDate && startDate > endDate) {
-      alert(`Check-in-Date must be before Check-out_Date`);
-    }
-  }, [startDate, endDate]);
+  // useEffect(() => {
+  //   if (startDate && endDate && startDate > endDate) {
+  //     alert(`Check-in-Date must be before Check-out_Date`);
+  //   }
+  // }, [startDate, endDate]);
 
 
   const toggleCard = (e) => {
@@ -104,6 +104,16 @@ const Hotel = () => {
       alert("Please fill all required fields!!");
       return;
     }
+
+    const startDateObj = new Date(startDate);
+    const endDateObj = new Date(endDate);
+
+    if (startDateObj && endDateObj && startDateObj > endDateObj) {
+      alert(`Check-in-Date must be before Check-out_Date`);
+      return;
+    }
+    alert("Search Successfull !!");
+
   };
   function decreaseTraveller() {
     if (travellers > 2) {
