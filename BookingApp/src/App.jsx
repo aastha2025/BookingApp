@@ -5,7 +5,7 @@ import './App.css'
 import MyHome from './Component/MyHome'
 import Footer1 from './Component/Footer1'
 import './Component/Flight/global.module.css';
-
+import Taxi from "./Component/Taxi/Taxi";
 
 
 // Lazy-loaded pages
@@ -46,6 +46,7 @@ function AppLayout() {
           <Route path='*' element={<NotFound />} />
           <Route  path= "/car"  element={<Car/>}/>
           <Route  path= "/Attractions"  element={<Attraction />}/>
+          <Route  path= "/taxi"  element={<Taxi/>}/>
         </Routes>
       </Suspense>
 
