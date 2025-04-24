@@ -11,8 +11,8 @@ function Car() {
     const [pickuptime, setPickuptime] = useState("");
     const [dropoffdate, setDropoffdate] = useState("");
     const [dropofftime, setDropofftime] = useState("");
-    const [searchHistory, setSearchHistory] = useState([]);
-    const [showHistory, setShowHistory] = useState(false);
+    // const [searchHistory, setSearchHistory] = useState([]);
+    // const [showHistory, setShowHistory] = useState(false);
     const [differentlocation, setDifferentlocation] = useState(false);
     const [driverage, setDriverage] = useState(true);
 
@@ -62,6 +62,7 @@ function Car() {
 
     const handleDriverage = (e) => {
         setDriverage(e.target.checked);
+        console.log(e.target.checked);
     }
 
 

@@ -1,0 +1,107 @@
+.airporttransportation{
+    display: flex;
+    padding: 20px 0;
+    gap: 30px;
+}
+
+.left{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    max-width: 100%;
+    height: auto;
+}
+.left1{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.leftleft{
+    padding: 20px;
+}
+
+.leftleft img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.leftright{
+    flex: 1;
+    padding-right: 20px;
+}
+
+.leftright > .carhead{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.leftright > .carpara{
+  padding: 6px 0;
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+  display: block;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .airporttransportation{
+        flex-direction: column;
+    }
+
+    .right{
+        margin-bottom: 20px;
+      
+    }
+    
+    .left1{
+        order: -1; /* move imge to top on mobile*/
+        flex-direction: row;
+        text-align: start;
+        align-items: flex-start;
+    }
+
+    .left1 > .leftright{
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    .left1 > .leftleft{
+        padding: 15px 15px 15px 15px;
+    }
+
+    .left1 > .leftleft img{
+        width: 60px;
+        height: 60px;
+    }
+    .left1 > .leftright{
+        padding: 10px;
+    }
+
+    .leftright > .carhead{
+        font-size: 14px;
+        white-space: normal;
+    }
+    
+}
