@@ -34,7 +34,12 @@ const Attraction = () => {
 
         <div className={style.Near}>
           <div className={style.upperGrid}>
-            <div className={style.cardy}>
+            <div className={style.card}>
+              <img  className={style.img} src="./images/d5.jpg" alt="image" />
+              <h5 className={style.heading5}>kolkata</h5>
+              <p className={style.paragraph}>helo</p>
+            </div>
+            {/* <div className={style.cardy}>
               <p className={style.content}>Kolkata</p>
             </div>
             <div className={style.cardy}></div>
@@ -42,7 +47,7 @@ const Attraction = () => {
           </div>
           <div className={style.lowerGrid}>
             <div className={style.cardy}></div>
-            <div className={style.cardy}></div>
+            <div className={style.cardy}></div> */}
             {/* <div className={style.cardy}></div> */}
           </div>
         </div>

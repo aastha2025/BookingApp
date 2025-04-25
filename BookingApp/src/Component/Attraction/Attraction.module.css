@@ -234,3 +234,46 @@ input[type="submit"]:hover {
     padding: 10px;
     border-radius: 5px;
   }
+
+
+
+
+  /* Card section*/
+
+  .upperGrid{
+    box-sizing: border-box;
+  }
+
+.card{
+  position: relative;
+  border-radius: 10px;
+    overflow: hidden;
+    height: 250px;
+    width: 250px;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.heading5{
+ position: absolute;
+ font-size: bold;
+color: #fff;
+padding: 5px 10px;
+border-radius: 5px;
+bottom: 40px;
+left: 5px;
+}
+
+.paragraph{
+position: absolute;  
+color: #fff;
+padding: 5px 10px;
+border-radius: 5px;
+bottom: 10px;
+left: 5px;
+}
