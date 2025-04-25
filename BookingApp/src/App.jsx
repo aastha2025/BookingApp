@@ -36,7 +36,7 @@ function AppLayout() {
     <>
       <Navbar />
 
-      <Suspense fallback={<div id="loader">Might be your Network is bad</div>}>
+      <Suspense fallback={<div id="loader"></div>}>
         <Routes>
           <Route path='/' element={<MyHome />} />
           <Route path='/flight' element={<Flight />} />

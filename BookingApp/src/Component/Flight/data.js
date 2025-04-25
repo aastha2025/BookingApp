@@ -24,7 +24,6 @@ export const test_trips = [
     }
   ];
 
-
   export const Trending_city = [
     {
       id: 1,

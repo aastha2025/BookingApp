@@ -23,6 +23,31 @@ const Attraction = () => {
           </div>
         </div>
       </div>
+      <div className={gb.container}>
+        <div className={style.recom}>
+          <div className={style.reL}>
+            <span className={style.reH}>Nearby destinations</span>
+            {/* <span className={style.reSH}>Our top picks for Delhi experiences to get you started</span> */}
+          </div>
+          {/* <div className={style.reR}><button>See All recommendation</button></div> */}
+        </div>
+
+        <div className={style.Near}>
+          <div className={style.upperGrid}>
+            <div className={style.cardy}>
+              <p className={style.content}>Kolkata</p>
+            </div>
+            <div className={style.cardy}></div>
+            <div className={style.cardy}></div>
+          </div>
+          <div className={style.lowerGrid}>
+            <div className={style.cardy}></div>
+            <div className={style.cardy}></div>
+            {/* <div className={style.cardy}></div> */}
+          </div>
+        </div>
+
+      </div>
     </>
   )
 }
