@@ -9,7 +9,7 @@
     font-size: 48px;
     font-weight: 800;
     line-height: 62px;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     font-family: var(--sub-font);
     padding-left: 20px;
 }
@@ -148,3 +148,89 @@ input[type="submit"]:hover {
     }
   }
   
+
+  .recom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reL {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1px;
+    padding: 20px;
+    padding-top: 50px;
+    /* align-items: center; */
+  }
+
+  .reH {
+    font-weight: 700;
+    color: rgb(26,26,26);
+    font-size: 24px;
+    font-family: "Blue Sans", BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 32px;
+  }
+
+  .reSH {
+    font-weight: 400;
+    color: rgb(89,89,89);
+    font-size: 16px;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 24px;
+  }
+
+  .reR > button {
+    font-weight: 400;
+    color: rgb(0,108,228);
+    line-height: 24px;
+    font-size: 16px;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 10px;
+    /* padding-top: 5; */
+    background-color: transparent;
+    border: 1px solid rgb(0,108,228);
+    border-radius: 4px;
+  }
+
+  .reR > button:hover {
+    background-color: rgb(233, 240, 248);
+    color: rgb(0,108,228);
+    cursor: pointer;
+  }
+
+  .Near {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .upperGrid, .lowerGrid {
+    display: flex;
+    gap: 20px;
+
+  }
+
+
+  .cardy {
+    width: 340px;
+    height: 200px;
+    background-image: url('/booking.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+    right: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
