@@ -35,20 +35,74 @@ const Attraction = () => {
         <div className={style.Near}>
           <div className={style.upperGrid}>
             <div className={style.card}>
-              <img  className={style.img} src="./images/d5.jpg" alt="image" />
-              <h5 className={style.heading5}>kolkata</h5>
-              <p className={style.paragraph}>helo</p>
+              <img className={style.img} src="./images/old_goa.jpg" alt="image" />
+              <h5 className={style.heading5}>Old Goa</h5>
+              <p className={style.paragraph}>191 things to do</p>
             </div>
-            {/* <div className={style.cardy}>
-              <p className={style.content}>Kolkata</p>
+            <div className={style.card}>
+              <img className={style.img} src="./images/Than.jpg" alt="image" />
+              <h5 className={style.heading5}>Thanjavur</h5>
+              <p className={style.paragraph}>27 things to do</p>
             </div>
-            <div className={style.cardy}></div>
-            <div className={style.cardy}></div>
+            <div className={style.card}>
+              <img className={style.img} src="./images/Agra.jpg" alt="image" />
+              <h5 className={style.heading5}>Agra</h5>
+              <p className={style.paragraph}>781 things to do</p>
+            </div>
           </div>
-          <div className={style.lowerGrid}>
-            <div className={style.cardy}></div>
-            <div className={style.cardy}></div> */}
-            {/* <div className={style.cardy}></div> */}
+          <div className={style.upperGrid}>
+            <div className={style.card}>
+              <img className={style.img} src="./images/d5.jpg" alt="image" />
+              <h5 className={style.heading5}>Varanasi</h5>
+              <p className={style.paragraph}>414 things to do</p>
+            </div>
+            <div className={style.card}>
+              <img className={style.img} src="./images/kol.jpg" alt="image" />
+              <h5 className={style.heading5}>kolkata</h5>
+              <p className={style.paragraph}>136 things to do</p>
+            </div>
+          </div>
+          <hr />
+          <span className={style.flight}>Your account, your travel</span>
+          <div className={style.AccounTravel}>
+            <div className={style.TravelLeft}>
+              <h5>All your trip details in one place</h5>
+              <p className={style.flightAccountP}>Sign in to book faster and manage your trip with ease</p>
+              <div className={style.flightAccountButton}>
+                <button className={style.l} >Sign in</button>
+                <button className={style.r} >Register</button>
+              </div>
+            </div>
+            <div className={style.TravelRight}>
+              <img src="/images/Genius.png" alt="I'm here" width={"90px"} height={"110px"} />
+            </div>
+          </div>
+          <hr />
+          <span className={style.flight}>Your account, your travel</span>
+          <div className={style.thee}>
+            <div className={style.boxy}>
+              <img className={style.chotiImg} src="./images/Att.png" alt="" />
+              <div className={style.AttractContent}>
+                <span className={style.chotiHeading}>Explore top attractions</span>
+                <p className={style.pary}>Experience the best of your destination with attractions, tours, activities, and more</p>
+              </div>
+            </div>
+            <div className={style.boxy}>
+              <img className={style.chotiImg} src="./images/sch.png" alt="" />
+              <div className={style.AttractContent}>
+                <span className={style.chotiHeading}>Fast and flexible</span>
+                <p className={style.pary}>Book tickets online in minutes, with free cancellation on many attractions</p>
+              </div>
+            </div>
+            <div className={style.boxy}>
+              <img className={style.chotiImg} src="./images/client.png" alt="" />
+              <div className={style.AttractContent}>
+                <span className={style.chotiHeading}>Support when you need it</span>
+                <p className={style.pary}>Booking.com's global Customer Service team is here to help 24/7</p>
+              </div>
+            </div>
+            {/* <div className={style.boxy}></div>
+            <div className={style.boxy}></div> */}
           </div>
         </div>
 
