@@ -104,6 +104,29 @@ const Attraction = () => {
             {/* <div className={style.boxy}></div>
             <div className={style.boxy}></div> */}
           </div>
+          <hr />
+          <div className={style.recom}>
+            <div className={style.reLL}>
+              <span className={style.reH}>Nearby destinations</span>
+              <span className={style.reSH}>Our top picks for Delhi experiences to get you started</span>
+            </div>
+            {/* <div className={style.reR}><button>See All recommendation</button></div> */}
+          </div>
+
+          {/* // make a navbar now for different cities and make it responsive */}
+          <div className={style.BtnFlexy}>
+            <button>Europe</button>
+            <button>North America</button>
+            <button>Asia</button>
+            <button>Africa</button>
+            <button>Oceania</button>
+            <button>Middle East</button>
+            <button>Caribbean</button>
+            <button>South America</button>
+            <button>Central America</button>
+          </div>
+          <hr />
+
         </div>
 
       </div>
