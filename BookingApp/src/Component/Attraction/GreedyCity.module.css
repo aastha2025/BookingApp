@@ -1,0 +1,87 @@
+.GreedyCity {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.boxu {
+    width: 250px;
+    height: 150px;
+    /* background-color: #000000; */
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* cursor: pointer; */
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
+  }
+  
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: transition 0.3s ease;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 1); */
+}
+
+.img:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.heading5{
+position: absolute;
+font-size: bold;
+color: #fff;
+padding: 5px 10px;
+border-radius: 5px;
+bottom: 40px;
+left: 5px;
+z-index: 99;
+}
+
+.paragraph{
+  position: absolute;
+  z-index: 99;
+color: #fff;
+padding: 5px 10px;
+border-radius: 5px;
+bottom: 10px;
+left: 5px;
+}
+
+.head5{
+    position: absolute;
+    font-size: bold;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 40px;
+    left: 5px;
+    z-index: 99;
+}
+    
+.para{
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 10px;
+    left: 5px;
+}
+
+

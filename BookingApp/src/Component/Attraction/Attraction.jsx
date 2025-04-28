@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Attraction.module.css';
 import gb from '../Flight/global.module.css';
+// import GreedyCity from './GreedyCity';
+import { Europe, NorthAmerica, Asia, Africa, Oceania, MiddleEast, Caribbean, SouthAmerica, CentralAmerica} from './data3';
+// import { NorthAmerica } from './data3';
+
+const GreedyCity = React.lazy(() => import('./GreedyCity'));
 
 
 const Attraction = () => {
+  const [country, setCountry] = useState('Europe');
   return (
     <>
       <div className={`${style.AttractionHead}`}>
@@ -115,18 +121,68 @@ const Attraction = () => {
 
           {/* // make a navbar now for different cities and make it responsive */}
           <div className={style.BtnFlexy}>
-            <button>Europe</button>
-            <button>North America</button>
-            <button>Asia</button>
-            <button>Africa</button>
-            <button>Oceania</button>
-            <button>Middle East</button>
-            <button>Caribbean</button>
-            <button>South America</button>
-            <button>Central America</button>
+            <button 
+              className={` ${style.countryBtn} ${country === 'Europe' ? style.selected : ''} `} 
+              onClick={() => setCountry('Europe')} 
+            >
+              Europe
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'NorthAmerica' ? style.selected : ''} `} 
+              onClick={() => setCountry('NorthAmerica')}>North America</button>
+            <button 
+              className={`${style.countryBtn} ${country === 'Asia' ? style.selected : ''} `}
+              onClick={() => setCountry('Asia')}
+            >
+              Asia
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'Africa' ? style.selected : ''} `}
+              onClick={() => setCountry('Africa')}
+            >
+              Africa
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'Oceania' ? style.selected : ''} `}
+              onClick={() => setCountry('Oceania')}
+            >
+              Oceania
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'MiddleEast' ? style.selected : ''} `}
+              onClick={() => setCountry('MiddleEast')}
+            >
+              Middle East
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'Caribbean' ? style.selected : ''} `}
+              onClick={() => setCountry('Caribbean')}
+            >
+              Caribbean
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'SouthAmerica' ? style.selected : ''} `}
+              onClick={() => setCountry('SouthAmerica')}
+            >
+              South America
+            </button>
+            <button 
+              className={`${style.countryBtn} ${country === 'CentralAmerica' ? style.selected : ''} `}
+              onClick={() => setCountry('CentralAmerica')}
+            >
+              Central America
+            </button>
           </div>
           <hr />
-
+          {country === 'Europe'? <GreedyCity data = {Europe} />: ''} 
+          {country === 'NorthAmerica'? <GreedyCity data = {NorthAmerica} />: ''} 
+          {country === 'Asia'? <GreedyCity data = {Asia} />: ''} 
+          {country === 'Africa'? <GreedyCity data = {Africa} />: ''} 
+          {country === 'Oceania'? <GreedyCity data = {Oceania} />: ''} 
+          {country === 'MiddleEast'? <GreedyCity data = {MiddleEast} />: ''} 
+          {country === 'Caribbean'? <GreedyCity data = {Caribbean} />: ''} 
+          {country === 'SouthAmerica'? <GreedyCity data = {SouthAmerica} />: ''} 
+          {country === 'CentralAmerica'? <GreedyCity data = {CentralAmerica} />: ''} 
         </div>
 
       </div>

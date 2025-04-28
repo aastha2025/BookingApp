@@ -411,18 +411,20 @@ hr {
   /* border: 1px solid #e9e7e7; */
 }
 
-.BtnFlexy > button {
+.countryBtn {
   padding: 10px 20px 10px 20px;
-  border: none;
+  /* border: none; */
   line-height: 20px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  background-color: transparent;
+  background-color: white;
   border: none;
 }
 
-.BtnFlexy > button:hover {
-  /* border: 1px solid #006CE4; */
-  background-color: #f3f3f3;
+
+.selected {
+  background-color: #f0ecec ;
+  border-radius: 12px;
+  border-bottom: 2px solid #006CE4 ;
 }
