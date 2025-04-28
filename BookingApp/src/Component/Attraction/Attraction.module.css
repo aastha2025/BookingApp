@@ -360,6 +360,7 @@ hr {
   /* background-color: aqua; */
   display: flex;
   padding: 5px;
+  padding-bottom: 0px;
 }
 
 .AttractContent {
@@ -388,4 +389,40 @@ hr {
   width: 30px;
   height: 30px;
   margin: 10px;
+}
+
+.reLL {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+  /* padding: 20px; */
+  padding-top: 0px;
+  /* align-items: center; */
+}
+
+.BtnFlexy {
+  display: flex;
+  /* justify-content: space-a; */
+  /* gap: 10px; */
+  align-items: center;
+  /* padding: 20px; */
+  border-radius: 10px;
+  /* border: 1px solid #e9e7e7; */
+}
+
+.BtnFlexy > button {
+  padding: 10px 20px 10px 20px;
+  border: none;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.BtnFlexy > button:hover {
+  /* border: 1px solid #006CE4; */
+  background-color: #f3f3f3;
 }
