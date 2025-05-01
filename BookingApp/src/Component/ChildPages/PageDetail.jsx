@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './PageDetail.module.css'
 import gb from '../Flight/global.module.css'
-
+import {Page} from './data4.js';
 const PageDetail = () => {
   return (
     <>
@@ -22,4 +22,4 @@ const PageDetail = () => {
   )
 }
 
-export default PageDetail
+export default PageDetail;
